@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/digitalgv/static/css/main.4bb1c32d.chunk.css",
+    "main.js": "/digitalgv/static/js/main.fde2f2bf.chunk.js",
+    "runtime-main.js": "/digitalgv/static/js/runtime-main.fa5b7da6.js",
+    "static/css/2.feac8f0d.chunk.css": "/digitalgv/static/css/2.feac8f0d.chunk.css",
+    "static/js/2.cdb58131.chunk.js": "/digitalgv/static/js/2.cdb58131.chunk.js",
+    "index.html": "/digitalgv/index.html",
+    "precache-manifest.0c9a836dcd25cf783a6e6b1db033454a.js": "/digitalgv/precache-manifest.0c9a836dcd25cf783a6e6b1db033454a.js",
+    "precache-manifest.c3c2ff9f2bc6a0482c126cd0ed1a96b5.js": "/digitalgv/precache-manifest.c3c2ff9f2bc6a0482c126cd0ed1a96b5.js",
+    "service-worker.js": "/digitalgv/service-worker.js",
+    "static/js/2.cdb58131.chunk.js.LICENSE.txt": "/digitalgv/static/js/2.cdb58131.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/digitalgv/static/media/roboto-slab-latin-700.a977a6cb.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa5b7da6.js",
+    "static/css/2.feac8f0d.chunk.css",
+    "static/js/2.cdb58131.chunk.js",
+    "static/css/main.4bb1c32d.chunk.css",
+    "static/js/main.fde2f2bf.chunk.js"
+  ]
+}
