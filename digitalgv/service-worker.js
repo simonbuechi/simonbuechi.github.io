@@ -15,7 +15,7 @@ importScripts("/digitalgv/workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/digitalgv/workbox-v4.3.1"});
 
 importScripts(
-  "/digitalgv/precache-manifest.c3c2ff9f2bc6a0482c126cd0ed1a96b5.js"
+  "/digitalgv/precache-manifest.a068a48f6119fccccc2bb3ef0fe1488a.js"
 );
 
 self.addEventListener('message', (event) => {

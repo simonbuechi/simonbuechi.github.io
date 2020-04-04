@@ -1,34 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d4a4a1f4f6bd23dd3838d62dfdd05649",
+    "revision": "d6bfcf2237196b248945f5aebed9a6ca",
     "url": "/digitalgv/index.html"
   },
   {
-    "url": "/digitalgv/precache-manifest.0c9a836dcd25cf783a6e6b1db033454a.js"
-  },
-  {
-    "revision": "e806d4dcd3d8e74993a0c7e0cc86701a",
-    "url": "/digitalgv/service-worker.js"
-  },
-  {
-    "revision": "95df151f2102372c294a",
+    "revision": "1cf2985c4f74af22a02e",
     "url": "/digitalgv/static/css/2.feac8f0d.chunk.css"
   },
   {
-    "revision": "422c27ff153ed90e1726",
+    "revision": "58dfba750376eec9efca",
     "url": "/digitalgv/static/css/main.4bb1c32d.chunk.css"
   },
   {
-    "revision": "95df151f2102372c294a",
-    "url": "/digitalgv/static/js/2.cdb58131.chunk.js"
+    "revision": "1cf2985c4f74af22a02e",
+    "url": "/digitalgv/static/js/2.b1dadee7.chunk.js"
   },
   {
     "revision": "d09ac505fec0e9130a1d5b85fb3fa6dc",
-    "url": "/digitalgv/static/js/2.cdb58131.chunk.js.LICENSE.txt"
+    "url": "/digitalgv/static/js/2.b1dadee7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "422c27ff153ed90e1726",
-    "url": "/digitalgv/static/js/main.fde2f2bf.chunk.js"
+    "revision": "58dfba750376eec9efca",
+    "url": "/digitalgv/static/js/main.6fadf349.chunk.js"
   },
   {
     "revision": "907ee462d1fd5530bd65",
