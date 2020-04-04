@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+	background: linear-gradient(-45deg, #fff, #cfd8dc);
+	background-size: 400% 400%;
+/*	animation: gradient 15s ease infinite; */
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+img.dialog {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.fullheight {
+  vertical-align: middle;
+}
+
+.defaultpadding {
+  padding: 16px 16px 16px 16px;
+}
+.defaultpaddingright {
+  padding-right: 16px !important;
+}

@@ -1,0 +1,39 @@
+{
+  "base": {
+    "title": "Simon Büchi",
+    "language": "Change language",
+    "toEnglish": "Switch to English",
+    "toGerman": "Switch to German",
+    "copyright": "© Copyright 2020 Simon Büchi",
+    "navStart": "Start",
+    "navAbout": "About",
+    "navOffering": "Offering",
+    "navProjects": "Projects",
+    "navContact": "Contact",
+    "navSendMessage": "Send Message"
+  },
+  "start": {
+    "title": "Welcome",
+    "paragraph1": "",
+    "image": "Simon Büchi Portrait"
+  },
+  "about": {
+    "title": "About",
+    "paragraph1": "This site is about me, Simon Büchi. Swiss national, citizen of the canton of Zurich, resident of the city of Winterthur. Alumnus of Kantonsschule Buelrain and University of St. Gallen. I have been working as business analyst, programmer, business engineer, project manager. I am interested in trends in banking and web devolopment. More than technologies I am fascinated by disruptive business models. I enjoy reading about philosophy, economics, politics, history and technology. I enjoy classical music.",
+    "titleLinks": "Links"
+  },
+  "offering": {
+
+  },
+  "projects": {
+    "title": "Projects",
+    "paragraph1": "Click on project to learn more.",
+    "pactaTitle": "Pacta - decentralized organisations"
+  },
+  "contact": {
+
+  },
+  "sendMessage": {
+
+  }
+}
