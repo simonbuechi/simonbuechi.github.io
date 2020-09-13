@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "./static/css/main.4c7961bd.chunk.css",
-    "main.js": "./static/js/main.0e67eccd.chunk.js",
-    "runtime-main.js": "./static/js/runtime-main.057117bc.js",
-    "static/js/2.aca15c71.chunk.js": "./static/js/2.aca15c71.chunk.js",
+    "main.css": "./static/css/main.96261ce0.chunk.css",
+    "main.js": "./static/js/main.8e638595.chunk.js",
+    "runtime-main.js": "./static/js/runtime-main.d41cde8b.js",
+    "static/js/2.3bf52616.chunk.js": "./static/js/2.3bf52616.chunk.js",
     "index.html": "./index.html",
-    "precache-manifest.e3bfaafe1ad0d105efe49f7379519e3b.js": "./precache-manifest.e3bfaafe1ad0d105efe49f7379519e3b.js",
+    "precache-manifest.3b0b57329996c4f6d9e739da290d6c63.js": "./precache-manifest.3b0b57329996c4f6d9e739da290d6c63.js",
     "service-worker.js": "./service-worker.js",
-    "static/js/2.aca15c71.chunk.js.LICENSE.txt": "./static/js/2.aca15c71.chunk.js.LICENSE.txt",
-    "static/media/index.css": "./static/media/bg.ecbdc845.jpg",
-    "static/media/simonbuechi-landscape-medium.jpg": "./static/media/simonbuechi-landscape-medium.a25047c6.jpg"
+    "static/js/2.3bf52616.chunk.js.LICENSE.txt": "./static/js/2.3bf52616.chunk.js.LICENSE.txt",
+    "static/media/index.css": "./static/media/bg.672f97dd.jpg",
+    "static/media/simonbuechi-landscape-medium.jpg": "./static/media/simonbuechi-landscape-medium.93a5f7d7.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.057117bc.js",
-    "static/js/2.aca15c71.chunk.js",
-    "static/css/main.4c7961bd.chunk.css",
-    "static/js/main.0e67eccd.chunk.js"
+    "static/js/runtime-main.d41cde8b.js",
+    "static/js/2.3bf52616.chunk.js",
+    "static/css/main.96261ce0.chunk.css",
+    "static/js/main.8e638595.chunk.js"
   ]
 }
