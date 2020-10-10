@@ -40,7 +40,7 @@
     "g.js": "^0.1.2",
     "generative-design-library.js": "^0.1.2",
     "glob": "^7.1.1",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "opentype.js": "^0.6.8",
     "p5": "^0.7.2",
     "source-map-concat": "^1.0.1",
