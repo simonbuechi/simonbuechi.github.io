@@ -11,6 +11,7 @@ Some drafts I created with Processing and p5.js
 ## Open source examples
 
 * https://github.com/manoloide/AllSketchs
+* https://github.com/kgolid (see visuals on generated.space)
 
 ## Inspirational sites
 
