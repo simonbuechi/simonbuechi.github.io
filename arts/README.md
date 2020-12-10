@@ -17,9 +17,13 @@ Some drafts I created with Processing and p5.js
 * Avatars
   * see https://github.com/RobertBroersma/bigheads
 * Patterns
- * see https://patternpad.com/
- * see https://doodad.dev/pattern-generator/#beautiful-dingbats
+  * see https://patternpad.com/
+  * see https://doodad.dev/pattern-generator/#beautiful-dingbats
   
+
+read https://www.katevassgalerie.com/blog/art-and-blockchain-platforms
+
+
 ## Resources
 
 * https://processing.org/
