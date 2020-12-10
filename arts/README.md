@@ -2,7 +2,7 @@
 
 Some drafts I created with Processing and p5.js
 
-## 
+## My series
 
 * Intro
   * Grid
@@ -11,9 +11,14 @@ Some drafts I created with Processing and p5.js
   * ...
 * Colors
   * Color line grid
+  * see https://speckyboy.com/free-web-based-tools-for-web-designers/
+  * see https://gradienta.io/
+  * see https://colorsinspo.com/gradients/
 * Avatars
-  * ...
-  
+  * see https://github.com/RobertBroersma/bigheads
+* Patterns
+ * see https://patternpad.com/
+ * see https://doodad.dev/pattern-generator/#beautiful-dingbats
   
 ## Resources
 
