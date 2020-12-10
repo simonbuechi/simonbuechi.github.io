@@ -2,6 +2,19 @@
 
 Some drafts I created with Processing and p5.js
 
+## 
+
+* Intro
+  * Grid
+  * ...
+* Procedural (https://en.wikipedia.org/wiki/Procedural_generation)
+  * ...
+* Colors
+  * Color line grid
+* Avatars
+  * ...
+  
+  
 ## Resources
 
 * https://processing.org/
