@@ -1,25 +1,64 @@
-{
-  "short_name": "Simon Buechi",
-  "name": "Simon Buechi Website",
+﻿{
+  "short_name": "Voveo",
+  "name": "Voveo",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "32x32",
       "type": "image/x-icon"
     },
     {
       "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
       "src": "logo512.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#9c27b0",
+  "background_color": "#6a1b9a",
+  "categories": ["blockchain", "voting", "business", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Create assembly",
+      "short_name": "Create",
+      "description": "Create new assembly",
+      "url": "/new",
+      "icons": [{ "src": "icons/create.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Join",
+      "short_name": "Join",
+      "description": "Join an assembly",
+      "url": "/join",
+      "icons": [{ "src": "icons/join.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "History",
+      "short_name": "History",
+      "description": "Your recent activties",
+      "url": "/history",
+      "icons": [{ "src": "icons/history.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "How it works",
+      "short_name": "How To",
+      "description": "Q&A and introduction to Voveo",
+      "url": "/howitworks",
+      "icons": [{ "src": "icons/help.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Account",
+      "short_name": "Account",
+      "description": "Your account and settings",
+      "url": "/account",
+      "icons": [{ "src": "icons/account.png", "sizes": "192x192" }]
+    }
+  ]
 }
