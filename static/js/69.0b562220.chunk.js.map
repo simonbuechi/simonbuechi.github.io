@@ -1,0 +1,1 @@
+{"version":3,"sources":["utils/Router.js"],"names":["Router"],"mappings":"oHAAA,oBAEeA,YAAf","file":"static/js/69.0b562220.chunk.js","sourcesContent":["import { HashRouter as Router} from \"react-router-dom\";\r\n\r\nexport default Router;"],"sourceRoot":""}
