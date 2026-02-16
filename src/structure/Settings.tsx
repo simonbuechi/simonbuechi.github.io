@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n/i18n";
 //material-ui
@@ -10,29 +10,16 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import CircularProgress from "@mui/material/CircularProgress";
-//icons
-//import { InformationOutline, AccountBox } from "@mdi/js";
-//import Brightness6 from 'mdi-material-ui/Brightness6';
-//custom
-//const Web3 = lazy(() => import("../web3/Web3"));
 
 function Settings() {
   const { t } = useTranslation();
   const [dialogDisclaimer, setDialogDisclaimer] = useState(false);
-  const [dialogWeb3, setDialogWeb3] = useState(false);
 
   const handleDialogDisclaimerOpen = () => {
     setDialogDisclaimer(true);
   };
   const handleDialogDisclaimerClose = () => {
     setDialogDisclaimer(false);
-  };
-  const handleDialogWeb3Open = () => {
-    setDialogWeb3(true);
-  };
-  const handleDialogWeb3Close = () => {
-    setDialogWeb3(false);
   };
   const handleLangChange = (name) => (event) => {
     i18n.changeLanguage(name);
@@ -53,34 +40,12 @@ function Settings() {
         </Tooltip>
       </ButtonGroup>
       <Box mt={1}>
-        <Tooltip title="Connect to your Ethereum account">
-          <Button size="small" variant="outlined" color="secondary" onClick={handleDialogWeb3Open}>
-            Web3 Connect
-          </Button>
-        </Tooltip>
-      </Box>
-      <Box mt={1}>
         <Tooltip title="Disclaimer">
           <Button size="small" variant="outlined" color="secondary" onClick={handleDialogDisclaimerOpen}>
             Disclaimer
           </Button>
         </Tooltip>
       </Box>
-      <Dialog onClose={handleDialogWeb3Close} open={dialogWeb3} keepMounted maxWidth="lg">
-        <DialogContent>
-          <Typography variant="h2" gutterBottom>
-            Connect Wallet
-          </Typography>
-          <Suspense fallback={<CircularProgress color="primary" />}>
-            {/* <Web3 />  */} 
-          </Suspense>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleDialogWeb3Close} variant="contained" color="primary">
-            {t("base.close")}
-          </Button>
-        </DialogActions>
-      </Dialog>
       <Dialog onClose={handleDialogDisclaimerClose} aria-labelledby="dialogDisclaimer" open={dialogDisclaimer}>
         <DialogContent>
           <Typography variant="h2" gutterBottom>
