@@ -1,2 +1,0 @@
-(this["webpackJsonpbuechi.name"]=this["webpackJsonpbuechi.name"]||[]).push([[30],{7331:function(n,c){},7372:function(n,c){},7374:function(n,c){},765:function(n,c){}}]);
-//# sourceMappingURL=30.991374bd.chunk.js.map

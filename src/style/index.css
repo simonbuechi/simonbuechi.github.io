@@ -1,0 +1,300 @@
+/*
+@font-face {
+  font-family: Basetica;
+  src: url("Basetica-Med.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("RobotoSlab-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+*/
+@font-face {
+  font-family: "Playfair Display";
+  src: url("PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("SourceSerifPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("SourceSerifPro-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  font-display: swap;
+}
+
+html {
+  background: linear-gradient(135deg, #ffffff 0%, #e6e9f0 100%);
+  min-height: 100%;
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+
+
+  /* simple diamond pattern
+  background-color: #ccc;
+  background-image:
+    repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0, 0, 0, .1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, .1) 75%, rgba(0, 0, 0, .1)),
+    linear-gradient(120deg, rgba(0, 0, 0, .1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, .1) 75%, rgba(0, 0, 0, .1));
+  background-size: 70px 120px;
+  */
+
+  /* simple diamond pattern v2
+  background: #cfd8dc;
+  background-image: repeating-linear-gradient(60deg, #cfd8dc, #cfd8dc 6em, transparent 6.1em, transparent 9em, #cfd8dc 9.1em),
+    repeating-linear-gradient(-60deg, #cfd8dc, #cfd8dc 6em, transparent 6.1em, transparent 9em, #cfd8dc 9.1em),
+    repeating-linear-gradient(90deg, #ffffff, #ffffff 3em, transparent 3.1em, transparent 5.2em, #ffffff 5.25em);
+  background-position: 0.48em 0;
+  background-size: 300em;
+  */
+
+  /*
+  background-color: #ffffff;
+  background-image: url("../assets/Ethereum_logo_2014.svg");
+ 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(176,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23cfd8dc'/%3E%3Cstop offset='1' stop-color='%23eceff1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='44' height='44' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='22' cy='22' r='22'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.22'/%3E%3C/svg%3E");
+
+  background-attachment: fixed;
+  background-size: cover;
+
+    */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientSize {
+  0% {
+    background-position: 0% 100%;
+  }
+
+  25% {
+    background-position: 100% 100%;
+  }
+
+  50% {
+    background-position: 0% 100%;
+  }
+
+  75% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+/*
+#root {
+  min-height: 100vh;
+  background: radial-gradient(ellipse, rgba(207, 216, 220, 1) 50%, rgba(207, 216, 220, 0.5) 100%);
+  **	background: radial-gradient(ellipse at bottom right, rgba(236,239,241,0.5) 0%, rgba(176,190,197, 1) 60%); 
+  background-size: 200% 200%;
+  animation: gradientSize 20s infinite;
+}
+*/
+img.dialog {
+  height: 80vh;
+}
+
+.fullheight {
+  vertical-align: middle;
+}
+
+.defaultpadding {
+  padding: 16px 16px 16px 16px;
+}
+
+.defaultpaddingright {
+  padding-right: 16px !important;
+}
+
+/* Markdown/Showdown fixes */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* Ethereum Spinner */
+
+/*
+  Colors of Ethereum diamond
+  red HEX #ff9c92 RGB (255,156,146)
+  yellow  HEX #ffe94d RGB (255,233,77)
+  green HEX #88d848 RGB (136,216,72)
+  purple HEX #ce71c3 RGB (206,113,195)
+  blue HEX #5a9ded RGB (90,157,237)
+  teal HEX #53d3e0 RGB (83,211,224)
+*/
+
+.eth {
+  margin: auto;
+  position: relative;
+  /*
+  position: absolute;
+  left: calc(50% - 10em / 2);
+  top: calc(50% - 4em);
+*/
+  width: 10em;
+  height: 10em;
+  font-size: 0.22em;
+}
+
+.eth .top,
+.eth .bottom {
+  width: 10em;
+  height: 10em;
+  background: rgba(206, 113, 195, .9);
+  transform: rotateX(65deg) rotateZ(45deg);
+  transform-style: preserve-3d;
+  position: absolute;
+  animation: rotate 10s linear infinite;
+}
+
+.eth.click .top,
+.eth.click .bottom {
+  animation: rotate 1s linear infinite;
+}
+
+.eth .top .left,
+.eth .bottom .left,
+.eth .top .right,
+.eth .bottom .right,
+.eth .top .up,
+.eth .bottom .up,
+.eth .top .down,
+.eth .bottom .down {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.eth .top .left,
+.eth .bottom .left,
+.eth .top .right,
+.eth .bottom .right {
+  border-left: 5em solid transparent;
+  border-right: 5em solid transparent;
+  border-bottom: 15em solid rgba(255, 156, 146, 0.5);
+  transform-origin: bottom;
+}
+
+.eth .top .up,
+.eth .bottom .up,
+.eth .top .down,
+.eth .bottom .down {
+  transform-origin: bottom right;
+  border-top: 5em solid transparent;
+  border-right: 15em solid rgba(255, 233, 77, 0.5);
+  border-bottom: 5em solid transparent;
+  border-left: none;
+  top: 0em;
+}
+
+.eth .top .left,
+.eth .bottom .left {
+  left: 0;
+  top: -5em;
+  transform: rotateX(-70deg);
+}
+
+.eth .top .right,
+.eth .bottom .right {
+  transform: rotateX(-110deg);
+  left: 0em;
+  top: -15em;
+}
+
+.eth .top .up,
+.eth .bottom .up {
+  transform: rotateY(70deg);
+  left: -5em;
+}
+
+.eth .top .down,
+.eth .bottom .down {
+  transform: rotateY(110deg);
+  left: -15em;
+}
+
+.eth .top {
+  left: 0;
+  top: 0;
+}
+
+.eth .bottom {
+  left: 0;
+  top: 1.5em;
+  background: rgba(83, 211, 224, 0.9);
+}
+
+.eth .bottom .left,
+.eth .bottom .right {
+  border-bottom: 15em solid rgba(136, 216, 72, 0.5);
+}
+
+.eth .bottom .up,
+.eth .bottom .down {
+  border-right: 15em solid rgba(90, 157, 237, 0.5);
+}
+
+.eth .bottom .left {
+  transform: rotateX(70deg);
+}
+
+.eth .bottom .right {
+  transform: rotateX(110deg);
+}
+
+.eth .bottom .up {
+  transform: rotateY(-70deg);
+}
+
+.eth .bottom .down {
+  transform: rotateY(-110deg);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(65deg) rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateX(65deg) rotateZ(360deg);
+  }
+}
