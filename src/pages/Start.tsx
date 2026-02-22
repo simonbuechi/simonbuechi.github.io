@@ -15,7 +15,7 @@ import List from "@mui/material/List";
 import Box from "@mui/material/Box";
 //icons
 import Icon from "../utils/Icon";
-import { mdiOpenInNew, mdiFaceMan, mdiCreativeCommons } from "@mdi/js";
+import { mdiOpenInNew, mdiImage, mdiCreativeCommons } from "@mdi/js";
 //images
 import portraitBig from "../assets/simonbuechi-hiking.webp";
 
@@ -65,7 +65,7 @@ function Start() {
             {t("about.body4")}
           </Typography>
           <Typography gutterBottom>
-            <Button variant="contained" color="primary" onClick={handleDialogPortraitOpen} startIcon={<Icon path={mdiFaceMan} />}>
+            <Button variant="contained" color="primary" onClick={handleDialogPortraitOpen} startIcon={<Icon path={mdiImage} />}>
               {t("start.image")}
             </Button>
           </Typography>
