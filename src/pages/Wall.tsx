@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 const Wall = () => {
   const { t } = useTranslation();
   return (
-    <Grid item xs={12}>
+    <Grid size={{ xs: 12 }}>
       <Typography variant="h2">{t("wall.title")}</Typography>
       <Typography variant="body1">This feature has been disabled during the migration.</Typography>
     </Grid>

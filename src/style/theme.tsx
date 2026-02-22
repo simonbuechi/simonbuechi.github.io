@@ -176,13 +176,6 @@ const theme = createTheme({
         },
       },
     },
-    MuiGrid: {
-      styleOverrides: {
-        "spacing-xs-3": {
-          margin: 0,
-        },
-      },
-    },
     MuiFab: {
       styleOverrides: {
         root: {

@@ -25,6 +25,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemSecondaryAction from "@mui/material/ListItemSecondaryAction";
@@ -113,7 +114,7 @@ const Arts = () => {
         <title>Simon Buechi Artworks</title>
         <meta name="description" content="Generative artworks created with p5.js and crypto signatures" />
       </Helmet>
-      <Grid item xs={12} md={12}>
+      <Grid size={{ xs: 12, md: 12 }}>
         <Typography variant="h2" gutterBottom>
           {t("arts.title")}
         </Typography>
@@ -231,30 +232,35 @@ const Arts = () => {
                   checkFilter(item.color, item.noise, item.animated, item.starred) && (
                     <Zoom in key={index}>
                       <div>
-                        <ListItem button component={Link} to={"/arts/" + item.id}>
-                          <Tooltip title={t("arts.artworkTooltipShow")}>
-                            <ListItemAvatar color="secondary">
-                              <Avatar>{index}</Avatar>
-                            </ListItemAvatar>
-                          </Tooltip>
-                          <ListItemText primary={item.primary + " (" + formatDate(item.date) + ")"} secondary={item.secondary} />
-
-                          <ListItemSecondaryAction>
-                            {item.staticImage && (
-                              <Tooltip title={t("arts.artworkTooltipImage")}>
-                                <IconButton edge="end" href={STATIC_IMAGE_URL + "large/" + item.id + ".jpg"} target="_blank">
-                                  <Icon path={mdiImage} />
-                                </IconButton>
-                              </Tooltip>
-                            )}
-                            {item.link && (
-                              <Tooltip title={t("arts.artworkTooltipLink")}>
-                                <IconButton edge="end" href={item.link} target="_blank">
-                                  <Icon path={mdiOpenInNew} />
-                                </IconButton>
-                              </Tooltip>
-                            )}
-                          </ListItemSecondaryAction>
+                        <ListItem
+                          disablePadding
+                          secondaryAction={
+                            <>
+                              {item.staticImage && (
+                                <Tooltip title={t("arts.artworkTooltipImage")}>
+                                  <IconButton edge="end" href={STATIC_IMAGE_URL + "large/" + item.id + ".jpg"} target="_blank">
+                                    <Icon path={mdiImage} />
+                                  </IconButton>
+                                </Tooltip>
+                              )}
+                              {item.link && (
+                                <Tooltip title={t("arts.artworkTooltipLink")}>
+                                  <IconButton edge="end" href={item.link} target="_blank">
+                                    <Icon path={mdiOpenInNew} />
+                                  </IconButton>
+                                </Tooltip>
+                              )}
+                            </>
+                          }
+                        >
+                          <ListItemButton component={Link} to={"/arts/" + item.id}>
+                            <Tooltip title={t("arts.artworkTooltipShow")}>
+                              <ListItemAvatar color="secondary">
+                                <Avatar>{index}</Avatar>
+                              </ListItemAvatar>
+                            </Tooltip>
+                            <ListItemText primary={item.primary + " (" + formatDate(item.date) + ")"} secondary={item.secondary} />
+                          </ListItemButton>
                         </ListItem>
                       </div>
                     </Zoom>
@@ -274,7 +280,7 @@ const Arts = () => {
           <Suspense fallback={<CircularProgress color="primary" />}>{currentContent}</Suspense>
         </Dialog>
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         &nbsp;
       </Grid>
     </Grid>

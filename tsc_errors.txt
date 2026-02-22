@@ -1,0 +1,219 @@
+﻿src/App.tsx(11,20): error TS2307: Cannot find module '@mui/material/Hidden' or its corresponding type declarations.
+src/App.tsx(40,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/App.tsx(62,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/About.tsx(109,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/About.tsx(114,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element[]; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element[]; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/About.tsx(123,29): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: "a"; } & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, "className" | ... 15 more ... | "secondaryAction">): Element', gave the following error.
+    Type '{ children: Element[]; button: true; component: "a"; href: string; }' is not assignable to type 'IntrinsicAttributes & { component: "a"; } & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: "a"; } & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, "className" | ... 15 more ... | "secondaryAction">'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element[]; button: true; component: string; href: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/pages/About.tsx(148,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element[]; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element[]; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/About.tsx(157,20): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & ListItemOwnProps & CommonProps & Omit<any, "className" | ... 15 more ... | "secondaryAction">): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element[]; button: true; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element[]; button: true; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/pages/About.tsx(184,29): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: "a"; } & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, "className" | ... 15 more ... | "secondaryAction">): Element', gave the following error.
+    Type '{ children: Element[]; button: true; component: "a"; href: string; }' is not assignable to type 'IntrinsicAttributes & { component: "a"; } & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: "a"; } & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, "className" | ... 15 more ... | "secondaryAction">'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element[]; button: true; component: string; href: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/pages/Arts.tsx(116,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element[]; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element[]; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Arts.tsx(234,35): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>): Element', gave the following error.
+    Type '{ children: Element[]; button: true; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element[]; button: true; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/pages/Arts.tsx(277,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: string; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: string; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Blog.tsx(9,6): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element[]; item: true; xs: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element[]; item: true; xs: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Offering.tsx(22,20): error TS2307: Cannot find module '@mui/material/Hidden' or its corresponding type declarations.
+src/pages/Offering.tsx(84,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element[]; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element[]; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Offering.tsx(219,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Projects.tsx(50,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: (Element | Element[])[]; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: (Element | Element[])[]; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Projects.tsx(87,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Queries.tsx(9,6): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element[]; item: true; xs: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element[]; item: true; xs: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Start.tsx(42,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Start.tsx(47,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Start.tsx(74,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element[]; item: true; xs: number; md: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element[]; item: true; xs: number; md: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/pages/Start.tsx(82,27): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: "a"; } & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, "className" | ... 15 more ... | "secondaryAction">): Element', gave the following error.
+    Type '{ children: Element[]; button: true; component: "a"; href: string; }' is not assignable to type 'IntrinsicAttributes & { component: "a"; } & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: "a"; } & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, "className" | ... 15 more ... | "secondaryAction">'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element[]; button: true; component: string; href: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/pages/Wall.tsx(9,6): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element[]; item: true; xs: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element[]; item: true; xs: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/structure/Footer.tsx(15,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: string; item: true; xs: number; sm: number; lg: number; xl: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: string; item: true; xs: number; sm: number; lg: number; xl: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/structure/Footer.tsx(18,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/structure/Header.tsx(8,20): error TS2307: Cannot find module '@mui/material/Hidden' or its corresponding type declarations.
+src/structure/Header.tsx(38,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/structure/Header.tsx(41,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; sm: number; lg: number; xl: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/structure/Header.tsx(52,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<...>): Element', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element', gave the following error.
+    Type '{ children: Element; item: true; xs: number; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme>; } & SystemProps<Theme> & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "sx" | ... 1 more ... | keyof GridBaseProps>'.
+src/structure/Header.tsx(66,27): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/structure/Header.tsx(69,27): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/structure/Header.tsx(72,27): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/structure/Header.tsx(75,27): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/structure/Header.tsx(78,27): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/structure/Header.tsx(81,27): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/structure/Header.tsx(84,27): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & { component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; } & ListItemOwnProps & CommonProps & Omit<...>'.
+  Overload 2 of 2, '(props: DefaultComponentProps<ListItemTypeMap<{}, "li">>): Element', gave the following error.
+    Type '{ children: Element; button: true; onClick: () => void; component: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>; to: string; }' is not assignable to type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+      Property 'button' does not exist on type 'IntrinsicAttributes & ListItemOwnProps & CommonProps & Omit<DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>, "className" | ... 15 more ... | "secondaryAction">'.
+src/style/theme.tsx(181,9): error TS2353: Object literal may only specify known properties, and '"spacing-xs-3"' does not exist in type 'Partial<OverridesStyleRules<keyof GridClasses, "MuiGrid", Omit<Theme, "components" | "palette"> & CssVarsTheme>>'.

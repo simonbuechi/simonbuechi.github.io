@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 //material-ui
 import Typography from "@mui/material/Typography";
 import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Grid";
@@ -39,12 +40,12 @@ function Start() {
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={4}>
-      <Grid item xs={12} md={12}>
+      <Grid size={{ xs: 12, md: 12 }}>
         <Typography variant="h2" gutterBottom>
           {t("start.title")}
         </Typography>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Box mb={3}>
           <Typography variant="h3" gutterBottom>
             {t("about.personTitle")}
@@ -71,7 +72,7 @@ function Start() {
           </Typography>
         </Box>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Typography variant="h3" gutterBottom>
           {t("start.engagementsTitle")}
         </Typography>
@@ -79,10 +80,10 @@ function Start() {
           {myJobs.map((item, index) => (
             <Zoom in style={{ transitionDelay: 450 + index * 100 + "ms" }} key={item.primary}>
               <div>
-                <ListItem button component="a" href={item.link}>
+                <ListItemButton component="a" href={item.link}>
                   <ListItemIcon color="secondary">{item.icon}</ListItemIcon>
                   <ListItemText primary={item.primary} secondary={item.secondary} />
-                </ListItem>
+                </ListItemButton>
               </div>
             </Zoom>
           ))}

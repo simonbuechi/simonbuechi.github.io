@@ -19,7 +19,6 @@ import Zoom from "@mui/material/Zoom";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import Hidden from "@mui/material/Hidden";
 //icons
 import Icon from "../utils/Icon";
 import {
@@ -81,7 +80,7 @@ function Offering() {
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={4}>
-      <Grid item xs={12} md={8}>
+      <Grid size={{ xs: 12, md: 8 }}>
         <Helmet>
           <title>Simon Buechi | Services</title>
           <meta name="description" content="Simon Buechi Büchi services skills" />
@@ -109,18 +108,16 @@ function Offering() {
                           <ListItemText
                             primary={item.text}
                             secondary={
-                              <Hidden smUp>
+                              <Box sx={{ display: { sm: 'none' } }}>
                                 <Rating name="read-only" value={item.rating} max={3} readOnly />
-                              </Hidden>
+                              </Box>
                             }
                           />
-                          <Hidden xsDown>
-                            <Tooltip title={ratingLabels[item.rating]}>
-                              <ListItemSecondaryAction>
-                                <Rating name="read-only" value={item.rating} max={3} readOnly />
-                              </ListItemSecondaryAction>
-                            </Tooltip>
-                          </Hidden>
+                          <Tooltip title={ratingLabels[item.rating]}>
+                            <ListItemSecondaryAction sx={{ display: { xs: 'none', sm: 'block' } }}>
+                              <Rating name="read-only" value={item.rating} max={3} readOnly />
+                            </ListItemSecondaryAction>
+                          </Tooltip>
                         </ListItem>
                         <Divider />
                       </div>
@@ -148,18 +145,16 @@ function Offering() {
                           <ListItemText
                             primary={item.text}
                             secondary={
-                              <Hidden smUp>
+                              <Box sx={{ display: { sm: 'none' } }}>
                                 <Rating name="read-only" value={item.rating} max={3} readOnly />
-                              </Hidden>
+                              </Box>
                             }
                           />
-                          <Hidden xsDown>
-                            <Tooltip title={ratingLabels[item.rating]}>
-                              <ListItemSecondaryAction>
-                                <Rating name="read-only" value={item.rating} max={3} readOnly />
-                              </ListItemSecondaryAction>
-                            </Tooltip>
-                          </Hidden>
+                          <Tooltip title={ratingLabels[item.rating]}>
+                            <ListItemSecondaryAction sx={{ display: { xs: 'none', sm: 'block' } }}>
+                              <Rating name="read-only" value={item.rating} max={3} readOnly />
+                            </ListItemSecondaryAction>
+                          </Tooltip>
                         </ListItem>
                         <Divider />
                       </div>
@@ -193,18 +188,16 @@ function Offering() {
                           <ListItemText
                             primary={item.text}
                             secondary={
-                              <Hidden smUp>
+                              <Box sx={{ display: { sm: 'none' } }}>
                                 <Rating name="read-only" value={item.rating} max={3} readOnly />
-                              </Hidden>
+                              </Box>
                             }
                           />
-                          <Hidden xsDown>
-                            <Tooltip title={ratingLabels[item.rating]}>
-                              <ListItemSecondaryAction>
-                                <Rating name="read-only" value={item.rating} max={3} readOnly />
-                              </ListItemSecondaryAction>
-                            </Tooltip>
-                          </Hidden>
+                          <Tooltip title={ratingLabels[item.rating]}>
+                            <ListItemSecondaryAction sx={{ display: { xs: 'none', sm: 'block' } }}>
+                              <Rating name="read-only" value={item.rating} max={3} readOnly />
+                            </ListItemSecondaryAction>
+                          </Tooltip>
                         </ListItem>
                         <Divider />
                       </div>
@@ -216,7 +209,7 @@ function Offering() {
           </Accordion>
         </Box>
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <Contact />
       </Grid>
     </Grid>

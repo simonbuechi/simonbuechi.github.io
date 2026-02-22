@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import QRCode from "qrcode.react";
+import { QRCodeSVG as QRCode } from "qrcode.react";
 //material-ui
 import Tooltip from "@mui/material/Tooltip";
 import Dialog from "@mui/material/Dialog";

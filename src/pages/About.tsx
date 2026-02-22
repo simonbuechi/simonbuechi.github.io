@@ -8,6 +8,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Zoom from "@mui/material/Zoom";
@@ -106,12 +107,12 @@ function About() {
         <title>Simon Buechi | About</title>
         <meta name="description" content="Simon Buechi Büchi about" />
       </Helmet>
-      <Grid item xs={12} md={12}>
+      <Grid size={{ xs: 12, md: 12 }}>
         <Typography variant="h2" gutterBottom>
           {t("about.title")}
         </Typography>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Box mb={3}>
           <Typography variant="h3" gutterBottom>
             {t("start.connectTitle")}
@@ -120,10 +121,10 @@ function About() {
             {myContacts.map((item, index) => (
               <Zoom in style={{ transitionDelay: 50 + index * 100 + "ms" }} key={item.primary}>
                 <div>
-                  <ListItem button component="a" href={item.link}>
+                  <ListItemButton component="a" href={item.link}>
                     <ListItemIcon color="secondary">{item.icon}</ListItemIcon>
                     <ListItemText primary={item.primary} secondary={item.secondary} />
-                  </ListItem>
+                  </ListItemButton>
                 </div>
               </Zoom>
             ))}
@@ -145,7 +146,7 @@ function About() {
           </Button>
         </Typography>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Typography variant="h3" gutterBottom>
           {t("about.blockchainTitle")}
         </Typography>
@@ -154,7 +155,7 @@ function About() {
             <Zoom in style={{ transitionDelay: 500 + index * 100 + "ms" }} key={item.primary}>
               <div>
                 <CopyToClipboard text={item.secondary} onCopy={handleCopyClick}>
-                  <ListItem button>
+                  <ListItemButton>
                     <Tooltip title={success ? t("base.copied") : t("base.copyClipboard")}>
                       <ListItemIcon color="secondary">{item.icon}</ListItemIcon>
                     </Tooltip>
@@ -167,7 +168,7 @@ function About() {
                       }
                     />
                     {item.qr && <QrCode text={item.secondary} />}
-                  </ListItem>
+                  </ListItemButton>
                 </CopyToClipboard>
               </div>
             </Zoom>
@@ -181,10 +182,10 @@ function About() {
             {myLinks.map((item, index) => (
               <Zoom in style={{ transitionDelay: 900 + index * 100 + "ms" }} key={item.primary}>
                 <div>
-                  <ListItem button component="a" href={item.link}>
+                  <ListItemButton component="a" href={item.link}>
                     <ListItemIcon color="secondary">{item.icon}</ListItemIcon>
                     <ListItemText primary={item.primary} secondary={item.secondary} />
-                  </ListItem>
+                  </ListItemButton>
                 </div>
               </Zoom>
             ))}

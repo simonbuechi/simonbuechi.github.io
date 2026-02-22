@@ -8,7 +8,6 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Hidden from "@mui/material/Hidden";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 // navigation / app shell
@@ -37,8 +36,8 @@ function App() {
       </Helmet>
       <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={0}>
         <Header />
-        <Grid item xs={12} sm={3} lg={3} xl={3}>
-          <Hidden xsDown>
+        <Grid size={{ xs: 12, sm: 3, lg: 3, xl: 3 }}>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             <Box mt={0}>
               <Tabs
                 orientation="vertical"
@@ -57,9 +56,9 @@ function App() {
                 <Settings />
               </Box>
             </Box>
-          </Hidden>
+          </Box>
         </Grid>
-        <Grid item xs={12} sm={9} lg={9} xl={9}>
+        <Grid size={{ xs: 12, sm: 9, lg: 9, xl: 9 }}>
           <Suspense fallback={<CircularProgress color="primary" />}>
             <Routes>
               <Route path="/" element={<Start />} />

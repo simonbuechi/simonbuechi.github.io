@@ -47,7 +47,7 @@ function Projects() {
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={4}>
-      <Grid item xs={12} md={8}>
+      <Grid size={{ xs: 12, md: 8 }}>
         <Helmet>
           <title>Simon Buechi | Projects</title>
           <meta name="description" content="Simon Buechi Büchi projects" />
@@ -84,7 +84,7 @@ function Projects() {
           </Zoom>
         ))}
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <Contact />
       </Grid>
     </Grid>
