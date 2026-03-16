@@ -21,7 +21,7 @@ function Settings() {
   const handleDialogDisclaimerClose = () => {
     setDialogDisclaimer(false);
   };
-  const handleLangChange = (name) => (event) => {
+  const handleLangChange = (name: string) => (event: React.MouseEvent<HTMLButtonElement>) => {
     i18n.changeLanguage(name);
   };
 

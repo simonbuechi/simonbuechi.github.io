@@ -13,7 +13,11 @@ import IconButton from "@mui/material/IconButton";
 import Icon from "../utils/Icon";
 import { mdiQrcode } from "@mdi/js";
 
-function QrCode(props) {
+interface QrCodeProps {
+  text: string;
+}
+
+function QrCode({ text }: QrCodeProps) {
   const { t } = useTranslation();
   const [dialogQr, setDialogQr] = useState(false);
 
@@ -23,8 +27,6 @@ function QrCode(props) {
   const handleDialogQrClose = () => {
     setDialogQr(false);
   };
-
-  const { text } = props;
 
   return (
     <React.Fragment>

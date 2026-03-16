@@ -49,7 +49,7 @@ function Offering() {
   const { t } = useTranslation();
   const [ready, setReady] = useState(false);
 
-  const ratingLabels = {
+  const ratingLabels: Record<number, string> = {
     1: "Basics",
     2: "Advanced",
     3: "Expert",

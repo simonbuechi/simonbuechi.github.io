@@ -8,27 +8,28 @@ import IconButton from "@mui/material/IconButton";
 import Icon from "../utils/Icon";
 import { mdiCheckboxMarkedCircle, mdiContentCopy } from "@mdi/js";
 
-function CopyButton(props) {
+interface CopyButtonProps {
+  text: string;
+}
+
+function CopyButton({ text }: CopyButtonProps) {
   const { t } = useTranslation();
   const [success, setSuccess] = useState(false);
 
   const handleCopyClick = () => {
     if (!success) {
-      this.setState({ success: true }, () => {
-        this.timer = setTimeout(() => {
-          setSuccess(false);
-        }, 1000);
-      });
+      setSuccess(true);
+      setTimeout(() => {
+        setSuccess(false);
+      }, 1000);
     }
   };
-
-  const { text } = this.props;
 
   return (
     <Tooltip title={t("base.copyClipboard")} aria-label={t("base.copyClipboard")}>
       <CopyToClipboard text={text} onCopy={handleCopyClick}>
         <IconButton color="secondary" aria-label="Copy">
-          {this.state.success ? <Icon path={mdiCheckboxMarkedCircle} fontSize="small" /> : <Icon path={mdiContentCopy} fontSize="small" />}
+          {success ? <Icon path={mdiCheckboxMarkedCircle} fontSize="small" /> : <Icon path={mdiContentCopy} fontSize="small" />}
         </IconButton>
       </CopyToClipboard>
     </Tooltip>

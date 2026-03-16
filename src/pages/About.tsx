@@ -78,7 +78,7 @@ function About() {
   ];
   const myContacts = [
     { primary: "LinkedIn", secondary: "", link: "https://www.linkedin.com/in/simonbuechi", icon: <Icon path={mdiLinkedin} /> },
-    { primary: "Facebook", secondary: "", link: "https://www.linkedin.com/in/simonbuechi", icon: <Icon path={mdiFacebook} /> },
+    { primary: "Facebook", secondary: "", link: "https://www.facebook.com/simonbuechi", icon: <Icon path={mdiFacebook} /> },
     { primary: "Twitter", secondary: "", link: "https://twitter.com/simonbuechi", icon: <Icon path={mdiTwitter} /> },
     { primary: "Whatsapp", secondary: "", link: "https://wa.me/41787401627", icon: <Icon path={mdiWhatsapp} /> },
   ];

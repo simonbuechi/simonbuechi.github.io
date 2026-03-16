@@ -5,11 +5,11 @@ import "./i18n/i18n";
 import SplashScreen from "./structure/SplashScreen";
 // import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 //import reportWebVitals from './reportWebVitals';
+import ThemeProvider from "./utils/ThemeProvider";
+import Router from "./utils/Router";
+import CssBaseline from "@mui/material/CssBaseline";
 //lazy load
-const ThemeProvider = lazy(() => import("./utils/ThemeProvider"));
-const Router = lazy(() => import("./utils/Router"));
 const App = lazy(() => import("./App"));
-const CssBaseline = lazy(() => import("@mui/material/CssBaseline"));
 
 const container = document.getElementById("root");
 if (!container) throw new Error("Failed to find the root element");

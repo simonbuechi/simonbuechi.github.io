@@ -47,7 +47,7 @@ const Arts = () => {
   const [currentTitle, setCurrentTitle] = useState("");
   const [signatureCollapsed, setSignatureCollapsed] = useState(false);
   const [customCollapsed, setCustomCollapsed] = useState(false);
-  const [seed, setSeed] = useState(null);
+  const [seed, setSeed] = useState<string | null>(null);
   const [customField, setCustomField] = useState("");
   const [filter, setFilter] = useState("starred");
   let navigate = useNavigate();
@@ -58,9 +58,11 @@ const Arts = () => {
   useEffect(() => {
     if (param["id"]) {
       let currentArtwork = artworkIndex.find((x) => x.id === param.id);
-      setCurrentTitle(currentArtwork.primary);
-      setCurrentContent(currentArtwork.content);
-      handledialogOpen();
+      if (currentArtwork) {
+        setCurrentTitle(currentArtwork.primary);
+        setCurrentContent(currentArtwork.content);
+        handledialogOpen();
+      }
     }
   }, [param]);
 
@@ -73,7 +75,7 @@ const Arts = () => {
     setCurrentContent(<></>);
     navigate("/arts", { replace: false });
   };
-  const handleSwitch = (item) => {
+  const handleSwitch = (item: string) => {
     if (item === "customCollapsed") {
       setSignatureCollapsed(false);
       setCustomCollapsed(!customCollapsed);
@@ -82,8 +84,8 @@ const Arts = () => {
       setCustomCollapsed(false);
     }
   };
-  const formatDate = (date) => {
-    return Intl.DateTimeFormat("default", { year: "2-digit", month: "long", day: "numeric" }).format(date);
+  const formatDate = (date: Date | string | number) => {
+    return Intl.DateTimeFormat("default", { year: "2-digit", month: "long", day: "numeric" }).format(new Date(date));
   };
   const storeSeed = () => {
     window.localStorage.setItem("seed", customField);
@@ -93,13 +95,13 @@ const Arts = () => {
     window.localStorage.removeItem("seed");
     setSeed(null);
   };
-  const handleCustomSeed = (event) => {
+  const handleCustomSeed = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCustomField(event.target.value);
   };
-  const handleFilter = (filter) => {
+  const handleFilter = (filter: string) => {
     setFilter(filter);
   };
-  const checkFilter = (color, noise, animated, starred) => {
+  const checkFilter = (color: boolean, noise: boolean, animated: boolean, starred: boolean) => {
     while (filter === "all") return true;
     while (filter === "starred" && starred) return true;
     while (filter === "noise" && noise) return true;
@@ -229,7 +231,7 @@ const Arts = () => {
             <List dense>
               {artworkIndex.map(
                 (item, index) =>
-                  checkFilter(item.color, item.noise, item.animated, item.starred) && (
+                  checkFilter(!!item.color, !!item.noise, !!item.animated, !!item.starred) && (
                     <Zoom in key={index}>
                       <div>
                         <ListItem
