@@ -9,8 +9,8 @@ const Artwork = (props) => {
   const SEED = window.localStorage.getItem("signature");
 
   let myShader;
-  let vs = "precision mediump float;attribute vec3 aPosition;void main(){gl_Position = vec4(aPosition, 1.0);}";
-  let fs =
+  const vs = "precision mediump float;attribute vec3 aPosition;void main(){gl_Position = vec4(aPosition, 1.0);}";
+  const fs =
     "precision mediump float;uniform vec2 u_resolution;uniform float u_time;void main(){vec2 p = (gl_FragCoord.xy * 0.5) / u_resolution;gl_FragColor = vec4(p.x, p.y, abs(sin(u_time * 0.5)), 1.0);}";
   let base;
   let xoff = 0;
@@ -36,7 +36,7 @@ const Artwork = (props) => {
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

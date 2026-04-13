@@ -24,9 +24,9 @@ const Artwork = (props) => {
       else if (mode === "greyscale") return MapGenerator.convertNoiseToGreyscaleMap(p5, this.noiseMap);
     }
     static convertNoiseToTerrainMap(noiseMap) {
-      let terrainMap = [];
-      let height = noiseMap.length;
-      let width = noiseMap[0].length;
+      const terrainMap = [];
+      const height = noiseMap.length;
+      const width = noiseMap[0].length;
       let currentHeight;
       for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {
@@ -42,9 +42,9 @@ const Artwork = (props) => {
       return terrainMap;
     }
     static convertNoiseToHeightMap(p5, noiseMap) {
-      let heightMap = [];
-      let height = noiseMap.length;
-      let width = noiseMap[0].length;
+      const heightMap = [];
+      const height = noiseMap.length;
+      const width = noiseMap[0].length;
       let currentHeight, discretizedHeight;
       for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {
@@ -56,9 +56,9 @@ const Artwork = (props) => {
       return heightMap;
     }
     static convertNoiseToGreyscaleMap(p5, noiseMap) {
-      let greyscaleMap = [];
-      let height = noiseMap.length;
-      let width = noiseMap[0].length;
+      const greyscaleMap = [];
+      const height = noiseMap.length;
+      const width = noiseMap[0].length;
       let clr;
       for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {
@@ -72,13 +72,13 @@ const Artwork = (props) => {
 
   class Noise {
     static generateNoiseMap(p5, mapWidth, mapHeight, scale, octaves, persistance, lacunarity) {
-      let noiseMap = [];
+      const noiseMap = [];
       if (scale <= 0) scale = 0.0001;
       let amplitude, frequency, noiseHeight, sampleX, sampleY, perlinValue;
       let maxNoiseHeight = -Infinity;
       let minNoiseHeight = Infinity;
-      let halfWidth = mapWidth / 2;
-      let halfHeight = mapHeight / 2;
+      const halfWidth = mapWidth / 2;
+      const halfHeight = mapHeight / 2;
       for (let y = 0; y < mapHeight; y++) {
         noiseMap[y] = [];
         for (let x = 0; x < mapWidth; x++) {
@@ -149,7 +149,7 @@ const Artwork = (props) => {
   }
 
   function generateOctaveOffsets(p5) {
-    let offsets = [];
+    const offsets = [];
     let offsetX, offsetY;
     for (let i = 0; i < 10; i++) {
       offsetX = p5.random(-100000, 100000);
@@ -202,7 +202,7 @@ const Artwork = (props) => {
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

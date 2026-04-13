@@ -9,9 +9,9 @@ const Artwork = (props) => {
   const canvasHeight = window.innerHeight;
   const seed = window.localStorage.getItem("signature");
   const XOFF_STEP = 0.015;
-  var allParticles = [];
-  var maxSplitCount = 3;
-  var distThreshold = 75;
+  const allParticles = [];
+  const maxSplitCount = 3;
+  const distThreshold = 75;
   let xoff = 0;
 
   class Particle {
@@ -60,16 +60,16 @@ const Artwork = (props) => {
       }
     }
     if (allParticles.length > 0) {
-      let data = Delaunay.triangulate(
+      const data = Delaunay.triangulate(
         allParticles.map(function (pt) {
           return [pt.pos.x, pt.pos.y];
         })
       );
       p5.strokeWeight(0.1);
       for (let i = 0; i < data.length; i += 3) {
-        let particle1 = allParticles[data[i]];
-        let particle2 = allParticles[data[i + 1]];
-        let particle3 = allParticles[data[i + 2]];
+        const particle1 = allParticles[data[i]];
+        const particle2 = allParticles[data[i + 1]];
+        const particle3 = allParticles[data[i + 2]];
         if (
           particle1.pos.dist(particle2.pos) > distThreshold ||
           particle2.pos.dist(particle3.pos) > distThreshold ||
@@ -77,7 +77,7 @@ const Artwork = (props) => {
         ) {
           continue;
         }
-        let mass = p5.max(-2 + particle1.life * 0.75, 0);
+        const mass = p5.max(-2 + particle1.life * 0.75, 0);
         p5.drawingContext.shadowColor = p5.color(110 + particle1.life * 1.5, 255, 255, 255 - particle1.life * 5);
         p5.drawingContext.shadowBlur = mass;
         p5.noFill();
@@ -107,10 +107,10 @@ Orginally from Jay LaPorte at https://github.com/ironwallaby/delaunay/blob/maste
 Tweaked it so instead of raising an error it would return an empty list.
 */
 var Delaunay;
-var EPSILON = 1.0 / 1048576.0;
+const EPSILON = 1.0 / 1048576.0;
 
 function supertriangle(vertices) {
-  var xmin = Number.POSITIVE_INFINITY,
+  let xmin = Number.POSITIVE_INFINITY,
     ymin = Number.POSITIVE_INFINITY,
     xmax = Number.NEGATIVE_INFINITY,
     ymax = Number.NEGATIVE_INFINITY,
@@ -142,7 +142,7 @@ function supertriangle(vertices) {
 }
 
 function circumcircle(vertices, i, j, k) {
-  var x1 = vertices[i][0],
+  let x1 = vertices[i][0],
     y1 = vertices[i][1],
     x2 = vertices[j][0],
     y2 = vertices[j][1],
@@ -194,7 +194,7 @@ function circumcircle(vertices, i, j, k) {
 }
 
 function dedup(edges) {
-  var i, j, a, b, m, n;
+  let i, j, a, b, m, n;
 
   for (j = edges.length; j; ) {
     b = edges[--j];
@@ -215,7 +215,7 @@ function dedup(edges) {
 
 Delaunay = {
   triangulate: function (vertices, key) {
-    var n = vertices.length,
+    let n = vertices.length,
       i,
       j,
       indices,
@@ -258,7 +258,7 @@ Delaunay = {
     /* Initialize the open list (containing the supertriangle and nothing
      * else) and the closed list (which is empty since we havn't processed
      * any triangles yet). */
-    var circCircle = circumcircle(vertices, n + 0, n + 1, n + 2);
+    const circCircle = circumcircle(vertices, n + 0, n + 1, n + 2);
     if (circCircle === undefined) return [];
 
     open = [circumcircle(vertices, n + 0, n + 1, n + 2)];
@@ -324,7 +324,7 @@ Delaunay = {
     )
       return null;
 
-    var a = tri[1][0] - tri[0][0],
+    const a = tri[1][0] - tri[0][0],
       b = tri[2][0] - tri[0][0],
       c = tri[1][1] - tri[0][1],
       d = tri[2][1] - tri[0][1],
@@ -333,7 +333,7 @@ Delaunay = {
     /* Degenerate tri. */
     if (i === 0.0) return null;
 
-    var u = (d * (p[0] - tri[0][0]) - b * (p[1] - tri[0][1])) / i,
+    const u = (d * (p[0] - tri[0][0]) - b * (p[1] - tri[0][1])) / i,
       v = (a * (p[1] - tri[0][1]) - c * (p[0] - tri[0][0])) / i;
 
     /* If we're outside the tri, fail. */

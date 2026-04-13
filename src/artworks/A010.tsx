@@ -73,7 +73,7 @@ const Artwork = (props) => {
   function mountains(p5, closerColor, furtherColor, mistColor) {
     //FIND THE REFERENCE Y OF EACH MOUNTAIN:
     let y0 = p5.height * MOUNTAIN_POSITIONING; //fist reference y
-    let cy = []; //initialize the reference y array
+    const cy = []; //initialize the reference y array
     for (let j = 0; j < MOUNTAIN_ROWS; j++) {
       cy[9 - j] = y0;
       y0 -= MOUNTAIN_INTERVAL / p5.pow(1.1, j);
@@ -81,11 +81,11 @@ const Artwork = (props) => {
     //DRAW THE MOUNTAINS/
     let dx = 0;
     for (let j = 1; j < MOUNTAIN_ROWS; j++) {
-      let a = p5.random(-p5.width / 2, p5.width / 2); //random discrepancy between the sin waves
-      let b = p5.random(-p5.width / 2, p5.width / 2); //random discrepancy between the sin waves
-      let c = p5.random(2, 4); //random amplitude for the second sin wave
-      let d = p5.random(40, 50); //noise function amplitude
-      let e = p5.random(-p5.width / 2, p5.width / 2); //adds a discrepancy between the noise of each mountain
+      const a = p5.random(-p5.width / 2, p5.width / 2); //random discrepancy between the sin waves
+      const b = p5.random(-p5.width / 2, p5.width / 2); //random discrepancy between the sin waves
+      const c = p5.random(2, 4); //random amplitude for the second sin wave
+      const d = p5.random(40, 50); //noise function amplitude
+      const e = p5.random(-p5.width / 2, p5.width / 2); //adds a discrepancy between the noise of each mountain
       for (let x = 0; x < p5.width; x++) {
         let y = cy[j]; //y = reference y
         y += 10 * j * p5.sin((2 * dx) / j + a); //first sin wave oscillates according to j (the closer the mountain, the bigger the amplitude and smaller the frequency)
@@ -100,7 +100,7 @@ const Artwork = (props) => {
       //ADD MIST
       p5.strokeWeight(1);
       for (let i = p5.height; i > cy[j]; i -= 1) {
-        let alfa = p5.map(i, cy[j], p5.height, 0, 1 / (j + 1)); //alfa is begins bigger for the further mountains
+        const alfa = p5.map(i, cy[j], p5.height, 0, 1 / (j + 1)); //alfa is begins bigger for the further mountains
         mistColor.setAlpha(alfa);
         p5.stroke(mistColor);
         //p5.stroke(p5.lerpColor(mistColor, mistColor, 0.2));

@@ -21,7 +21,7 @@ function Settings() {
   const handleDialogDisclaimerClose = () => {
     setDialogDisclaimer(false);
   };
-  const handleLangChange = (name: string) => (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleLangChange = (name: string) => (_event: React.MouseEvent<HTMLButtonElement>) => {
     i18n.changeLanguage(name);
   };
 
@@ -39,7 +39,11 @@ function Settings() {
           </Button>
         </Tooltip>
       </ButtonGroup>
-      <Box mt={1}>
+      <Box
+        sx={{
+          mt: 1,
+        }}
+      >
         <Tooltip title="Disclaimer">
           <Button size="small" variant="outlined" color="secondary" onClick={handleDialogDisclaimerOpen}>
             Disclaimer

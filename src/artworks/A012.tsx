@@ -46,14 +46,14 @@ const Artwork = (props) => {
 
   const draw = (p5) => {
     // bezier noise curve
-    var x1 = p5.width * SIZE_FACTOR * p5.noise(xoff + 15);
-    var x2 = p5.width * SIZE_FACTOR * p5.noise(xoff + 25);
-    var x3 = p5.width * SIZE_FACTOR * p5.noise(xoff + 35);
-    var x4 = p5.width * SIZE_FACTOR * p5.noise(xoff + 45);
-    var y1 = p5.height * SIZE_FACTOR * p5.noise(xoff + 55);
-    var y2 = p5.height * SIZE_FACTOR * p5.noise(xoff + 65);
-    var y3 = p5.height * SIZE_FACTOR * p5.noise(xoff + 75);
-    var y4 = p5.height * SIZE_FACTOR * p5.noise(xoff + 85);
+    const x1 = p5.width * SIZE_FACTOR * p5.noise(xoff + 15);
+    const x2 = p5.width * SIZE_FACTOR * p5.noise(xoff + 25);
+    const x3 = p5.width * SIZE_FACTOR * p5.noise(xoff + 35);
+    const x4 = p5.width * SIZE_FACTOR * p5.noise(xoff + 45);
+    const y1 = p5.height * SIZE_FACTOR * p5.noise(xoff + 55);
+    const y2 = p5.height * SIZE_FACTOR * p5.noise(xoff + 65);
+    const y3 = p5.height * SIZE_FACTOR * p5.noise(xoff + 75);
+    const y4 = p5.height * SIZE_FACTOR * p5.noise(xoff + 85);
     //p5.stroke(p5.color(0,0,100, BEZIER_ALPHA));
     //p5.bezier(x1, y1, x2, y2, x3, y3, x4, y4);
     //p5.bezier(p5.width-x1, p5.height-y1, p5.width-x2, p5.height-y2, p5.width-x3, p5.height-y3, p5.width-x4, p5.height-y4);

@@ -27,8 +27,8 @@ const Artwork = (props) => {
     p5.noFill();
     p5.beginShape();
     for (let i = 0; i < STRIPES; i++) {
-      let scl = 0.0003;
-      let angle = p5.noise(x * scl, y * scl, i * 0.0002) * 160;
+      const scl = 0.0003;
+      const angle = p5.noise(x * scl, y * scl, i * 0.0002) * 160;
       p5.vertex(x, y);
       x += p5.cos(angle) * 3;
       y += p5.sin(angle) * 3;
@@ -90,9 +90,9 @@ const Artwork = (props) => {
     p5.translate(p5.width / 2, p5.height / 2);
     p5.scale(0.55);
     p5.translate(-p5.width / 2, -p5.height / 2);
-    let y = p5.map(i, 0, LINES, 0, p5.height);
+    const y = p5.map(i, 0, LINES, 0, p5.height);
     //let col = p5.color(colors[i % colors.length]);
-    let col = p5.color(colors[p5.floor(p5.random(0, colors.length))]);
+    const col = p5.color(colors[p5.floor(p5.random(0, colors.length))]);
     p5.stroke(col);
     p5.line(0, y, p5.width, y);
     col.setAlpha(OPACITY);

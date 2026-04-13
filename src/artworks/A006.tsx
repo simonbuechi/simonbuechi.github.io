@@ -9,7 +9,7 @@ const Artwork = (props) => {
   //const seed = "adsfasdf234234";
   const noctaves = 4;
   let gl;
-  let c = [];
+  const c = [];
   let shader;
 
   const setup = (p5, canvasParentRef) => {

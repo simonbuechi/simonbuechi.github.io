@@ -11,13 +11,13 @@ const Artwork = (props) => {
   const SEED = window.localStorage.getItem("signature");
 
   let MyObject;
-  let _aryInitRot = [];
+  const _aryInitRot = [];
 
   function drawPart(p5, startX, startY, startZ, endX, endY, endZ, w, col) {
-    let angAxisZ = p5.atan2(endY - startY, endX - startX);
-    let distXY = p5.dist(startX, startY, endX, endY);
-    let angAxisY = -p5.atan2(endZ - startZ, distXY);
-    let distXYZ = p5.dist(0, startZ, distXY, endZ);
+    const angAxisZ = p5.atan2(endY - startY, endX - startX);
+    const distXY = p5.dist(startX, startY, endX, endY);
+    const angAxisY = -p5.atan2(endZ - startZ, distXY);
+    const distXYZ = p5.dist(0, startZ, distXY, endZ);
     p5.push();
     p5.translate(startX, startY, startZ);
     p5.rotateZ(angAxisZ);
@@ -49,7 +49,7 @@ const Artwork = (props) => {
       let currentZ;
       if (this.direction === true) {
         //extend
-        let ratio = (this.currentTime / this.totalTime) ** 0.5;
+        const ratio = (this.currentTime / this.totalTime) ** 0.5;
         currentX = this.startX + (this.endX - this.startX) * ratio;
         currentY = this.startY + (this.endY - this.startY) * ratio;
         currentZ = this.startZ + (this.endZ - this.startZ) * ratio;
@@ -59,7 +59,7 @@ const Artwork = (props) => {
         drawPart(p5, this.startX, this.startY, this.startZ, currentX, currentY, currentZ, this.w, this.col);
       } else {
         //shrink
-        let ratio = (1 - (this.currentTime - this.totalTime) / this.totalTime) ** 0.5;
+        const ratio = (1 - (this.currentTime - this.totalTime) / this.totalTime) ** 0.5;
         currentX = this.endX + (this.startX - this.endX) * ratio;
         currentY = this.endY + (this.startY - this.endY) * ratio;
         currentZ = this.endZ + (this.startZ - this.endZ) * ratio;
@@ -79,17 +79,17 @@ const Artwork = (props) => {
       this.t = 3;
       this.maxL = this.maxArea;
       this.parts = [];
-      let w = p5.max(p5.width / 300, this.maxW * p5.random() ** 12);
-      let startX = -this.maxArea / 2;
-      let startY = -this.maxArea / 2;
-      let startZ = -this.maxArea / 2;
+      const w = p5.max(p5.width / 300, this.maxW * p5.random() ** 12);
+      const startX = -this.maxArea / 2;
+      const startY = -this.maxArea / 2;
+      const startZ = -this.maxArea / 2;
       let aryEndXYZ = this.randomDirection(p5, startX, startY, startZ);
       while (p5.abs(aryEndXYZ[0]) > this.maxArea || p5.abs(aryEndXYZ[1]) > this.maxArea || p5.abs(aryEndXYZ[2]) > this.maxArea) {
         aryEndXYZ = this.randomDirection(p5, startX, startY, startZ);
       }
-      let endX = aryEndXYZ[0];
-      let endY = aryEndXYZ[1];
-      let endZ = aryEndXYZ[2];
+      const endX = aryEndXYZ[0];
+      const endY = aryEndXYZ[1];
+      const endZ = aryEndXYZ[2];
       this.partCount = p5.int(p5.random(1000));
       this.parts.push(new Part(p5, startX, startY, startZ, endX, endY, endZ, w, this.t, this.partCount, this.maxW));
       this.numPart = numPart;
@@ -104,17 +104,17 @@ const Artwork = (props) => {
       }
 
       if (this.isGenerate === true && this.parts.length < this.numPart) {
-        let w = p5.max(p5.width / 300, this.maxW * p5.random() ** 12);
-        let startX = this.parts[this.parts.length - 1].endX;
-        let startY = this.parts[this.parts.length - 1].endY;
-        let startZ = this.parts[this.parts.length - 1].endZ;
+        const w = p5.max(p5.width / 300, this.maxW * p5.random() ** 12);
+        const startX = this.parts[this.parts.length - 1].endX;
+        const startY = this.parts[this.parts.length - 1].endY;
+        const startZ = this.parts[this.parts.length - 1].endZ;
         let aryEndXYZ = this.randomDirection(p5, startX, startY, startZ);
         while (p5.abs(aryEndXYZ[0]) > this.maxArea || p5.abs(aryEndXYZ[1]) > this.maxArea || p5.abs(aryEndXYZ[2]) > this.maxArea) {
           aryEndXYZ = this.randomDirection(p5, startX, startY, startZ);
         }
-        let endX = aryEndXYZ[0];
-        let endY = aryEndXYZ[1];
-        let endZ = aryEndXYZ[2];
+        const endX = aryEndXYZ[0];
+        const endY = aryEndXYZ[1];
+        const endZ = aryEndXYZ[2];
         this.partCount++;
         this.parts.push(new Part(p5, startX, startY, startZ, endX, endY, endZ, w, this.t, this.partCount, this.maxW));
         this.isGenerate = false;
@@ -132,7 +132,7 @@ const Artwork = (props) => {
       let endX = startX;
       let endY = startY;
       let endZ = startZ;
-      let direction = p5.random(["-x", "x", "-y", "y", "-z", "z"]);
+      const direction = p5.random(["-x", "x", "-y", "y", "-z", "z"]);
       switch (direction) {
         case "-x":
           endX = startX + this.maxL * p5.random(-1, 0);
@@ -183,9 +183,9 @@ const Artwork = (props) => {
     p5.ortho(-p5.width / 2, p5.width / 2, -p5.width / 2, p5.width / 2, 0, p5.width * 2);
     p5.background(200);
     p5.ambientLight(60);
-    let ang = _aryInitRot[1][0] + p5.frameCount / 100;
+    const ang = _aryInitRot[1][0] + p5.frameCount / 100;
     p5.directionalLight(255, 255, 255, -p5.sin(ang), 1, -p5.cos(ang));
-    let c = p5.height / 2 / p5.tan(p5.PI / 6);
+    const c = p5.height / 2 / p5.tan(p5.PI / 6);
     p5.camera(c * p5.sin(ang), 0, c * p5.cos(ang), 0, 0, 0, 0, 1, 0);
     p5.rotateZ(p5.PI / 4);
     MyObject.update(p5);
@@ -194,7 +194,7 @@ const Artwork = (props) => {
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

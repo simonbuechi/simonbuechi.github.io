@@ -65,9 +65,9 @@ const Artwork = (props) => {
     p5.stroke(0);
     p5.strokeWeight(2);
     p5.beginShape();
-    for (var x = 0; x < 500; x++) {
-      var nx = p5.map(x, 0, 500, 0, 10);
-      var y = 500 * p5.noise(nx);
+    for (let x = 0; x < 500; x++) {
+      const nx = p5.map(x, 0, 500, 0, 10);
+      const y = 500 * p5.noise(nx);
       p5.vertex(x, y);
     }
     p5.endShape();

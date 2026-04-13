@@ -13,7 +13,7 @@ const Artwork = (props) => {
   const GRIDBOX = CRYSTAL_SIZE + PADDING;
   const START = CRYSTAL_SIZE / 2 + MARGIN;
   let PALETTE = [];
-  let ALL_CRYSTALS = [];
+  const ALL_CRYSTALS = [];
 
   const hexagon = (p5, posX, posY, radius) => {
     const rotAngle = 360 / 6;
@@ -163,7 +163,7 @@ const Artwork = (props) => {
 
   const makeCrystal = (p5, pos) => {
     const layers = layerConstructors.map((lcon) => {
-      let picker = p5.random(1);
+      const picker = p5.random(1);
       const draw = picker > lcon.weight;
       // const draw = lcon.name === 'Test Lines'
       return lcon.init(p5, {

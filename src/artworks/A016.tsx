@@ -69,19 +69,19 @@ const Artwork = (props) => {
     p5.scale(0.66);
     p5.translate(-p5.width / 2, -p5.height / 2);
 
-    let seg = p5.floor(p5.random(4, 8));
-    let w = p5.height / seg;
-    let v = p5.width / seg;
+    const seg = p5.floor(p5.random(4, 8));
+    const w = p5.height / seg;
+    const v = p5.width / seg;
     for (let i = 0; i <= seg; i++) {
       for (let j = 0; j <= seg; j++) {
-        let x = i * v;
-        let y = j * w;
+        const x = i * v;
+        const y = j * w;
         p5.noFill();
         p5.stroke(255, 1);
         if ((i + j) % 2 === 0) {
           let t = p5.random(100000);
-          let a = p5.random(1234567);
-          let col1 = p5.color(colors[0]);
+          const a = p5.random(1234567);
+          const col1 = p5.color(colors[0]);
           col1.setAlpha(0.1);
           p5.shuffle(colors, true);
           p5.push();
@@ -104,7 +104,7 @@ const Artwork = (props) => {
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

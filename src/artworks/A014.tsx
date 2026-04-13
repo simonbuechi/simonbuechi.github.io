@@ -19,15 +19,15 @@ const Artwork = (props) => {
   let vr = 0;
   let vg = 0;
   let vb = 0;
-  let tension = 0.5;
-  let sympathy = 0.25;
+  const tension = 0.5;
+  const sympathy = 0.25;
 
-  let px = [];
-  let py = [];
-  let vx = [];
-  let vy = [];
-  let ax = [];
-  let ay = [];
+  const px = [];
+  const py = [];
+  const vx = [];
+  const vy = [];
+  const ax = [];
+  const ay = [];
 
   const setup = (p5, canvasParentRef) => {
     //setup canvas
@@ -66,7 +66,7 @@ const Artwork = (props) => {
     ax[siz] = (px[si] + px[0] - px[siz] - px[siz]) * tension + (vx[si] + vx[0] - vx[siz] - vx[siz]) * sympathy;
     ay[siz] = (py[si] + py[0] - py[siz] - py[siz]) * tension + (vy[si] + vy[0] - vy[siz] - vy[siz]) * sympathy;
 
-    let randomNode = p5.floor(p5.random(0, size));
+    const randomNode = p5.floor(p5.random(0, size));
     ax[randomNode] = (halfWidth - px[randomNode]) * 0.001 + p5.randomGaussian() * 5;
     ay[randomNode] = (halfHeight - py[randomNode]) * 0.001 + p5.randomGaussian() * 5;
 

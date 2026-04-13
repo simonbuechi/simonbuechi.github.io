@@ -46,7 +46,15 @@ function Projects() {
   ];
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={4}>
+    <Grid
+      container
+      direction="row"
+      spacing={4}
+      sx={{
+        justifyContent: "center",
+        alignItems: "flex-start",
+      }}
+    >
       <Grid size={{ xs: 12, md: 8 }}>
         <Helmet>
           <title>Simon Buechi | Projects</title>
@@ -60,7 +68,11 @@ function Projects() {
         </Typography>
         {projects.map((item, index) => (
           <Zoom in style={{ transitionDelay: 150 + index * 100 + "ms" }} key={item.title}>
-            <Box my={2}>
+            <Box
+              sx={{
+                my: 2,
+              }}
+            >
               <Accordion>
                 <AccordionSummary expandIcon={<Icon path={mdiChevronDown} />}>
                   <Typography variant="body1">{item.title}</Typography>

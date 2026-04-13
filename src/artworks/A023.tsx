@@ -12,32 +12,32 @@ const Artwork = (props) => {
   const TOP_END = 0.52;
   const NUMBER_PARTICLES = 4000;
   let numSets;
-  let particle_sets = [];
+  const particle_sets = [];
 
   class Particle {
     constructor(p5, x, y, phi) {
       this.pos = {
         x,
-        y
+        y,
       };
       this.angle = phi;
       this.val = 0;
     }
-  
+
     update(p5, index) {
       this.pos.x += p5.cos(this.angle);
       this.pos.y += p5.sin(this.angle);
-      let nx = 1.8 * (p5.width - this.pos.x / p5.width) * 2;
-      let ny = 1.8 * (p5.height - this.pos.y / p5.height) * 2;
-      let n = {
+      const nx = 1.8 * (p5.width - this.pos.x / p5.width) * 2;
+      const ny = 1.8 * (p5.height - this.pos.y / p5.height) * 2;
+      const n = {
         x: nx,
-        y: ny
+        y: ny,
       };
-      let nval = (p5.noise(n.x + 10, n.y - 10) + 0.045 * (index - numSets / 2)) % 1;
+      const nval = (p5.noise(n.x + 10, n.y - 10) + 0.045 * (index - numSets / 2)) % 1;
       this.angle += 3 * (nval * 2 - 1);
       this.val = nval;
     }
-  
+
     display(p5, index) {
       if (this.val > BOTTOM_END && this.val < TOP_END) {
         p5.rect(this.pos.x, this.pos.y, 1, 1);
@@ -58,17 +58,10 @@ const Artwork = (props) => {
     p5.smooth();
     //numSets = p5.max(p5.floor(p5.randomGaussian(7,4)),3);
     numSets = 5;
-    for (var j = 0; j < numSets; j++) {
-      let particlesArray = [];
-      for (var i = 0; i < NUMBER_PARTICLES; i++) {
-        particlesArray.push(
-          new Particle(
-            p5,
-            p5.randomGaussian(p5.width / 2, 110),
-            p5.randomGaussian(p5.height / 2, 110),
-            p5.random() * 2 * p5.PI
-          )
-        );
+    for (let j = 0; j < numSets; j++) {
+      const particlesArray = [];
+      for (let i = 0; i < NUMBER_PARTICLES; i++) {
+        particlesArray.push(new Particle(p5, p5.randomGaussian(p5.width / 2, 110), p5.randomGaussian(p5.height / 2, 110), p5.random() * 2 * p5.PI));
       }
       particle_sets.push(particlesArray);
     }
@@ -76,8 +69,8 @@ const Artwork = (props) => {
 
   const draw = (p5) => {
     p5.translate(0, -100);
-    particle_sets.forEach(function(particles, index) {
-      particles.forEach(function(particle) {
+    particle_sets.forEach(function (particles, index) {
+      particles.forEach(function (particle) {
         particle.update(p5, index);
         particle.display(p5, index);
       });
@@ -87,7 +80,7 @@ const Artwork = (props) => {
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

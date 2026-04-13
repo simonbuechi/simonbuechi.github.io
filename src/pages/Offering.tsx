@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 //material-ui
@@ -47,7 +47,7 @@ import Contact from "../structure/Contact";
 
 function Offering() {
   const { t } = useTranslation();
-  const [ready, setReady] = useState(false);
+  const ready = true;
 
   const ratingLabels: Record<number, string> = {
     1: "Basics",
@@ -79,7 +79,15 @@ function Offering() {
   ];
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={4}>
+    <Grid
+      container
+      direction="row"
+      spacing={4}
+      sx={{
+        justifyContent: "center",
+        alignItems: "flex-start",
+      }}
+    >
       <Grid size={{ xs: 12, md: 8 }}>
         <Helmet>
           <title>Simon Buechi | Services</title>
@@ -91,13 +99,21 @@ function Offering() {
         <Typography variant="body2" gutterBottom>
           {t("offering.description")}
         </Typography>
-        <Box my={2}>
-          <Accordion TransitionProps={{ unmountOnExit: true, mountOnEnter: true }}>
+        <Box
+          sx={{
+            my: 2,
+          }}
+        >
+          <Accordion slotProps={{ transition: { unmountOnExit: true, mountOnEnter: true } }}>
             <AccordionSummary expandIcon={<Icon path={mdiChevronDown} />}>
               <Typography>{t("offering.categoryManagement")}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Box width="100%">
+              <Box
+                sx={{
+                  width: "100%",
+                }}
+              >
                 <List>
                   <Divider />
                   {skillsConsulting.map((item, index) => (
@@ -108,13 +124,13 @@ function Offering() {
                           <ListItemText
                             primary={item.text}
                             secondary={
-                              <Box sx={{ display: { sm: 'none' } }}>
+                              <Box sx={{ display: { sm: "none" } }}>
                                 <Rating name="read-only" value={item.rating} max={3} readOnly />
                               </Box>
                             }
                           />
                           <Tooltip title={ratingLabels[item.rating]}>
-                            <ListItemSecondaryAction sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <ListItemSecondaryAction sx={{ display: { xs: "none", sm: "block" } }}>
                               <Rating name="read-only" value={item.rating} max={3} readOnly />
                             </ListItemSecondaryAction>
                           </Tooltip>
@@ -128,13 +144,21 @@ function Offering() {
             </AccordionDetails>
           </Accordion>
         </Box>
-        <Box my={2}>
-          <Accordion TransitionProps={{ unmountOnExit: true, mountOnEnter: true }}>
+        <Box
+          sx={{
+            my: 2,
+          }}
+        >
+          <Accordion slotProps={{ transition: { unmountOnExit: true, mountOnEnter: true } }}>
             <AccordionSummary expandIcon={<Icon path={mdiChevronDown} />}>
               <Typography>{t("offering.categoryBlockchain")}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Box width="100%">
+              <Box
+                sx={{
+                  width: "100%",
+                }}
+              >
                 <List>
                   <Divider />
                   {skillsBlockchains.map((item, index) => (
@@ -145,13 +169,13 @@ function Offering() {
                           <ListItemText
                             primary={item.text}
                             secondary={
-                              <Box sx={{ display: { sm: 'none' } }}>
+                              <Box sx={{ display: { sm: "none" } }}>
                                 <Rating name="read-only" value={item.rating} max={3} readOnly />
                               </Box>
                             }
                           />
                           <Tooltip title={ratingLabels[item.rating]}>
-                            <ListItemSecondaryAction sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <ListItemSecondaryAction sx={{ display: { xs: "none", sm: "block" } }}>
                               <Rating name="read-only" value={item.rating} max={3} readOnly />
                             </ListItemSecondaryAction>
                           </Tooltip>
@@ -166,13 +190,21 @@ function Offering() {
           </Accordion>
         </Box>
 
-        <Box my={2}>
-          <Accordion TransitionProps={{ unmountOnExit: true, mountOnEnter: true }}>
+        <Box
+          sx={{
+            my: 2,
+          }}
+        >
+          <Accordion slotProps={{ transition: { unmountOnExit: true, mountOnEnter: true } }}>
             <AccordionSummary expandIcon={<Icon path={mdiChevronDown} />}>
               <Typography>{t("offering.categoryTechnologies")}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Box width="100%">
+              <Box
+                sx={{
+                  width: "100%",
+                }}
+              >
                 <List>
                   <Divider />
                   {skillsCoding.map((item, index) => (
@@ -188,13 +220,13 @@ function Offering() {
                           <ListItemText
                             primary={item.text}
                             secondary={
-                              <Box sx={{ display: { sm: 'none' } }}>
+                              <Box sx={{ display: { sm: "none" } }}>
                                 <Rating name="read-only" value={item.rating} max={3} readOnly />
                               </Box>
                             }
                           />
                           <Tooltip title={ratingLabels[item.rating]}>
-                            <ListItemSecondaryAction sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <ListItemSecondaryAction sx={{ display: { xs: "none", sm: "block" } }}>
                               <Rating name="read-only" value={item.rating} max={3} readOnly />
                             </ListItemSecondaryAction>
                           </Tooltip>

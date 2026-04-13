@@ -12,11 +12,14 @@ function Footer() {
   //const { t } = useTranslation();
   return (
     <React.Fragment>
-      <Grid size={{ xs: 12, sm: 3, lg: 3, xl: 3 }}>
-        &nbsp;
-      </Grid>
+      <Grid size={{ xs: 12, sm: 3, lg: 3, xl: 3 }}>&nbsp;</Grid>
       <Grid size={{ xs: 12, sm: 9, lg: 9, xl: 9 }}>
-        <Box mt={10} mb={2}>
+        <Box
+          sx={{
+            mt: 10,
+            mb: 2,
+          }}
+        >
           <Divider />
           <Typography variant="caption" color="textSecondary" gutterBottom>
             Copyright {new Date().getFullYear()} Simon Buechi | v{pkg.version}

@@ -10,16 +10,16 @@ const Artwork = (props) => {
   function mondrian(p5, x, y, x2, y2, N) {
     if (N === 0) {
       //base case
-      var borderWeight = 2; //stroke weight
-      var col = ["#ffcb21", "#ffffff", "#537bbe", "#e44240"]; //yellow, white, blue, red
+      const borderWeight = 2; //stroke weight
+      const col = ["#ffcb21", "#ffffff", "#537bbe", "#e44240"]; //yellow, white, blue, red
 
       p5.fill(col[p5.floor(p5.random(col.length))]); //randomly choose color
       p5.strokeWeight(borderWeight);
       p5.rect(x, y, x2 - x - borderWeight, y2 - y - borderWeight);
     } else {
       //recursive step -- break current rect() into 4 new random rectangles
-      var i = p5.floor(p5.random(x, x2)); //random x within current rect()
-      var j = p5.floor(p5.random(y, y2)); //random y within current rect()
+      const i = p5.floor(p5.random(x, x2)); //random x within current rect()
+      const j = p5.floor(p5.random(y, y2)); //random y within current rect()
 
       //recurse all rectangles
       mondrian(p5, x, y, i, j, N - 1); //upper left rect()

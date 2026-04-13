@@ -25,7 +25,7 @@ const Artwork = (props) => {
   const SPLATTER_OPACITY = 0.4;
   //global variables
   let colors = [];
-  let brush = { x: 0, y: 0, px: 0, py: 0 };
+  const brush = { x: 0, y: 0, px: 0, py: 0 };
   let xoff = 0;
   let i = 0;
   let iterations;
@@ -80,11 +80,11 @@ const Artwork = (props) => {
     p5.ellipse(x, y, radius * 2, radius * 2);
     if (level > 1) {
       level = level - 1;
-      let num = p5.random(2, 5);
+      const num = p5.random(2, 5);
       for (let i = 0; i < num; i++) {
-        let a = p5.random(0, p5.TWO_PI);
-        let nx = x + (p5.cos(a) * level * SPLATTER_SIZE_MAX) / 6;
-        let ny = y + (p5.sin(a) * level * SPLATTER_SIZE_MAX) / 6;
+        const a = p5.random(0, p5.TWO_PI);
+        const nx = x + (p5.cos(a) * level * SPLATTER_SIZE_MAX) / 6;
+        const ny = y + (p5.sin(a) * level * SPLATTER_SIZE_MAX) / 6;
         splatter(p5, nx, ny, radius / 2, level);
       }
     }
@@ -155,7 +155,7 @@ const Artwork = (props) => {
     }
     if (p5.frameCount % SPLATTER_FREQUENCY === 0) {
       p5.noStroke();
-      let color = colors[p5.floor(p5.random(colors.length))];
+      const color = colors[p5.floor(p5.random(colors.length))];
       color.setAlpha(SPLATTER_OPACITY);
       p5.fill(color);
       if (p5.random() > 0.5) {
@@ -183,7 +183,7 @@ const Artwork = (props) => {
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

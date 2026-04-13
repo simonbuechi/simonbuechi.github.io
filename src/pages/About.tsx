@@ -102,7 +102,15 @@ function About() {
   ];
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={4}>
+    <Grid
+      container
+      direction="row"
+      spacing={4}
+      sx={{
+        justifyContent: "center",
+        alignItems: "flex-start",
+      }}
+    >
       <Helmet>
         <title>Simon Buechi | About</title>
         <meta name="description" content="Simon Buechi Büchi about" />
@@ -113,7 +121,11 @@ function About() {
         </Typography>
       </Grid>
       <Grid size={{ xs: 12, md: 6 }}>
-        <Box mb={3}>
+        <Box
+          sx={{
+            mb: 3,
+          }}
+        >
           <Typography variant="h3" gutterBottom>
             {t("start.connectTitle")}
           </Typography>

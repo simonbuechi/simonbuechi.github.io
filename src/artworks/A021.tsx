@@ -8,13 +8,13 @@ const Artwork = (props) => {
   const CANVAS_HEIGHT = window.localStorage.getItem("customHeight") ? window.localStorage.getItem("customHeight") : window.innerHeight;
   const SEED = window.localStorage.getItem("signature");
 
-  let particles_a = [];
-  let particles_b = [];
-  let particles_c = [];
-  let nums = 600;
-  let angle_scale = 2.9;
-  let grid_resolution = 5;
-  let points = [];
+  const particles_a = [];
+  const particles_b = [];
+  const particles_c = [];
+  const nums = 600;
+  const angle_scale = 2.9;
+  const grid_resolution = 5;
+  const points = [];
   let x_grid_step;
   let y_grid_step;
 
@@ -23,7 +23,7 @@ const Artwork = (props) => {
   }
 
   function voronoi_noise(x, y) {
-    let max_step = Math.max(x_grid_step, y_grid_step);
+    const max_step = Math.max(x_grid_step, y_grid_step);
     let x_idx = Math.floor(x / x_grid_step);
     x_idx = Math.min(Math.max(0, x_idx), grid_resolution - 1);
     let y_idx = Math.floor(y / y_grid_step);
@@ -31,17 +31,17 @@ const Artwork = (props) => {
     let idx = to_idx(x_idx, y_idx);
     let min_dist = Math.hypot(points[idx][0] - x, points[idx][1] - y);
     //let min_dist_idx = 0;
-    let x_extent = Math.ceil(x_grid_step / max_step);
-    let y_extent = Math.ceil(y_grid_step / max_step);
+    const x_extent = Math.ceil(x_grid_step / max_step);
+    const y_extent = Math.ceil(y_grid_step / max_step);
     for (let i = -x_extent; i <= x_extent; i++) {
       for (let j = -y_extent; j <= y_extent; j++) {
-        let x1_idx = x_idx + i;
-        let y1_idx = y_idx + j;
+        const x1_idx = x_idx + i;
+        const y1_idx = y_idx + j;
         if (x1_idx < 0 || x1_idx >= grid_resolution || y1_idx < 0 || y1_idx >= grid_resolution) {
           continue;
         }
         idx = to_idx(x1_idx, y1_idx);
-        let dist = Math.hypot(points[idx][0] - x, points[idx][1] - y);
+        const dist = Math.hypot(points[idx][0] - x, points[idx][1] - y);
         if (dist < min_dist) {
           min_dist = dist;
           //min_dist_idx = idx;
@@ -58,7 +58,7 @@ const Artwork = (props) => {
     this.speed = 1;
 
     this.move = function () {
-      let angle = (voronoi_noise(this.pos.x, this.pos.y) * p5.TWO_PI) / angle_scale;
+      const angle = (voronoi_noise(this.pos.x, this.pos.y) * p5.TWO_PI) / angle_scale;
       this.dir.x = p5.cos(angle);
       this.dir.y = p5.sin(angle);
       this.vel = this.dir.copy();
@@ -88,7 +88,7 @@ const Artwork = (props) => {
     y_grid_step = p5.height / grid_resolution;
     for (let i = 0; i < grid_resolution; i++) {
       for (let j = 0; j < grid_resolution; j++) {
-        let idx = to_idx(i, j);
+        const idx = to_idx(i, j);
         points[idx] = [x_grid_step * (i + p5.random(0, 1)), y_grid_step * (j + p5.random(0, 1))];
       }
     }
@@ -98,8 +98,8 @@ const Artwork = (props) => {
     p5.noStroke();
     p5.smooth();
     for (let i = 0; i < nums; i++) {
-      let radius = p5.map(i, 0, nums, 1, 3);
-      let alpha = p5.map(i, 0, nums, 0, 250);
+      const radius = p5.map(i, 0, nums, 1, 3);
+      const alpha = p5.map(i, 0, nums, 0, 250);
       p5.fill((i / nums) * 255, 200, 255, alpha);
       particles_a[i].move();
       particles_a[i].display(radius);
@@ -115,7 +115,7 @@ const Artwork = (props) => {
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

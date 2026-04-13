@@ -84,7 +84,7 @@ const Artwork = (props) => {
     //loop to draw rectangles
     for (let i = 0; offset < p5.width; i++) {
       // let r = p5.floor(p5.noise(xoff) * 200);
-      let r = p5.max(p5.random() * p5.width * (1 / BAR_AMOUNT), BAR_LENGTH_MIN);
+      const r = p5.max(p5.random() * p5.width * (1 / BAR_AMOUNT), BAR_LENGTH_MIN);
       offset = offset + r;
       p5.fill(colors[i % colors.length]);
       p5.rect(offset - r, 0, offset, p5.height);

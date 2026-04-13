@@ -45,30 +45,43 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: ["Source Serif Pro", "serif"].join(","),
-
   },
   components: {
     MuiAppBar: {
-      styleOverrides: {
-        colorTransparent: {
-          boxShadow: "none",
+      variants: [
+        {
+          props: { color: "transparent" },
+          style: {
+            boxShadow: "none",
+          },
         },
-      },
+      ],
     },
     MuiDialog: {
       styleOverrides: {
-        paperFullScreen: {
-          overflow: "hidden",
+        paper: {
+          // any paper specific overrides if needed
         },
       },
+      variants: [
+        {
+          props: { fullScreen: true },
+          style: {
+            overflow: "hidden",
+          },
+        },
+      ],
     },
     MuiTabs: {
-      styleOverrides: {
-        vertical: {
-          borderRight: 0,
-          marginRight: 32,
+      variants: [
+        {
+          props: { orientation: "vertical" },
+          style: {
+            borderRight: 0,
+            marginRight: 32,
+          },
         },
-      },
+      ],
     },
     MuiTab: {
       styleOverrides: {
@@ -120,12 +133,17 @@ const theme = createTheme({
           textTransform: "none",
           marginBottom: 4,
         },
-        containedPrimary: {
-          color: "#000",
-          backgroundColor: "#fff",
-          backgroundImage: "linear-gradient(to right, " + brown[200] + " 0%, " + brown[100] + " 100%) ",
-        },
       },
+      variants: [
+        {
+          props: { variant: "contained", color: "primary" },
+          style: {
+            color: "#000",
+            backgroundColor: "#fff",
+            backgroundImage: "linear-gradient(to right, " + brown[200] + " 0%, " + brown[100] + " 100%)",
+          },
+        },
+      ],
     },
     MuiRating: {
       styleOverrides: {
@@ -140,7 +158,7 @@ const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          //    backgroundColor: "rgba(255,255,255,0.5)",
+          // backgroundColor: "rgba(255,255,255,0.5)",
         },
         outlined: {
           backgroundColor: "rgba(255,255,255,0)",
@@ -171,7 +189,7 @@ const theme = createTheme({
     },
     MuiList: {
       styleOverrides: {
-        padding: {
+        root: {
           paddingBottom: 24,
         },
       },
@@ -184,21 +202,29 @@ const theme = createTheme({
           bottom: 16,
           right: 16,
         },
-        primary: {
-          backgroundColor: brown[500],
-          "&:hover": {
-            backgroundColor: brown[600],
+      },
+      variants: [
+        {
+          props: { color: "primary" },
+          style: {
+            backgroundColor: brown[500],
+            "&:hover": {
+              backgroundColor: brown[600],
+            },
           },
         },
-      },
+      ],
     },
     MuiAvatar: {
-      styleOverrides: {
-        colorDefault: {
-          color: black,
-          backgroundColor: brown[100],
+      variants: [
+        {
+          props: { color: "default" },
+          style: {
+            color: black,
+            backgroundColor: brown[100],
+          },
         },
-      },
+      ],
     },
     MuiChip: {
       styleOverrides: {

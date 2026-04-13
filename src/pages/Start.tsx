@@ -2,41 +2,36 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 //material-ui
 import Typography from "@mui/material/Typography";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Grid";
 import Zoom from "@mui/material/Zoom";
-import List from "@mui/material/List";
 import Box from "@mui/material/Box";
-//icons
-import Icon from "../utils/Icon";
-import { mdiOpenInNew } from "@mdi/js";
 //images
 import portraitBig from "../assets/simonbuechi-hiking.webp";
 
 function Start() {
   const { t } = useTranslation();
 
-  const myJobs = [
-    { primary: "CROWDLITOKEN", secondary: "CTO", link: "https://crowdlitoken.com", icon: <Icon path={mdiOpenInNew} /> },
-    { primary: "Voveo", secondary: "Founder & Developer", link: "https://voveo.ch", icon: <Icon path={mdiOpenInNew} /> },
-    { primary: "Pacta", secondary: "Founder", link: "https://pacta.app", icon: <Icon path={mdiOpenInNew} /> },
-    { primary: "Blockchain Innovation Group", secondary: "Network Partner", link: "https://big-swiss.com", icon: <Icon path={mdiOpenInNew} /> },
-    { primary: "CryptoChefs", secondary: "Advisor", link: "https://cryptochefs.io/", icon: <Icon path={mdiOpenInNew} /> },
-  ];
-
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={4}>
+    <Grid
+      container
+      direction="row"
+      spacing={4}
+      sx={{
+        justifyContent: "center",
+        alignItems: "flex-start",
+      }}
+    >
       <Grid size={{ xs: 12, md: 12 }}>
         <Typography variant="h2" gutterBottom>
           {t("start.title")}
         </Typography>
       </Grid>
       <Grid size={{ xs: 12, md: 7 }}>
-        <Box mb={3}>
-
+        <Box
+          sx={{
+            mb: 3,
+          }}
+        >
           <Typography variant="h3" gutterBottom>
             {t("about.personTitle")}
           </Typography>
@@ -68,7 +63,12 @@ function Start() {
         </Box>
       </Grid>
       <Grid size={{ xs: 12, md: 5 }}>
-        <Box mb={4} className="skewed-frame-container">
+        <Box
+          className="skewed-frame-container"
+          sx={{
+            mb: 4,
+          }}
+        >
           <div className="skewed-frame">
             <img src={portraitBig} alt="simon buechi portrait" />
           </div>

@@ -12,17 +12,16 @@ const Artwork = (props) => {
   const IMAGE_OVERLOAD = 200;
   const COLOR_BACKGROUND = "#355070";
   const COLOR_PALETTE = [
-    "#6D597A", 
+    "#6D597A",
     "#C8AB83", //beige
-    "#5CC8FF", 
-    "#93867F", 
-    "#26C485"
+    "#5CC8FF",
+    "#93867F",
+    "#26C485",
   ];
   let g;
 
-  function createPattern(p5) 
-  {
-   // const w = p5.width;
+  function createPattern(p5) {
+    // const w = p5.width;
     const h = p5.height - IMAGE_OVERLOAD;
     g = p5.createGraphics(p5.width, h);
     g.pixelDensity(1);
@@ -33,15 +32,14 @@ const Artwork = (props) => {
     g.blendMode(p5.ADD);
     g.push();
     g.translate(-p5.width, -h);
-    for (let i = 0; i < ELEMENTS_NUMBER; i++) 
-    {
-      let x = p5.random(p5.width);
-      let y = p5.random(h);
+    for (let i = 0; i < ELEMENTS_NUMBER; i++) {
+      const x = p5.random(p5.width);
+      const y = p5.random(h);
       let _w = p5.max(20, p5.randomGaussian(p5.width * ELEMENT_SIZE, p5.width * ELEMENT_SIZE * 0.5));
-      let _h = p5.max(20, p5.randomGaussian(h * ELEMENT_SIZE, p5.width * ELEMENT_SIZE * 0.5 ));
+      let _h = p5.max(20, p5.randomGaussian(h * ELEMENT_SIZE, p5.width * ELEMENT_SIZE * 0.5));
       if (x + _w > p5.width) _w = p5.width - x;
       if (y + _h > h) _h = h - y;
-      if(i % 10 === 0) {
+      if (i % 10 === 0) {
         g.drawingContext.shadowOffsetX = p5.width;
         g.drawingContext.shadowOffsetY = h;
         g.drawingContext.shadowColor = p5.color(p5.random(COLOR_PALETTE) + p5.hex(100, 2));
@@ -60,7 +58,7 @@ const Artwork = (props) => {
       g.pop();
 
       g.push();
-      g.translate(x, y- h);
+      g.translate(x, y - h);
       g.shearX(shearX);
       g.shearY(shearY);
       g.rotate(rotate);
@@ -83,7 +81,7 @@ const Artwork = (props) => {
       g.pop();
       g.pop();
       */
-    //  g.ellipse(-w, 0, _w, _h);  // replicate to make seamless top/bottom and left/right repetition
+      //  g.ellipse(-w, 0, _w, _h);  // replicate to make seamless top/bottom and left/right repetition
       //g.rect(0,0,_w,_h);
       //g.triangle(-_w/2, -_h/2, 0, 0, _w, _h);
     }
@@ -105,9 +103,9 @@ const Artwork = (props) => {
   };
 
   const draw = (p5) => {
-    let offset = p5.width / 20;
-    let x = 0;
-    let y = 0;
+    const offset = p5.width / 20;
+    const x = 0;
+    const y = 0;
     p5.push();
     p5.noStroke();
     p5.drawingContext.shadowColor = p5.color(0, 0, 100, 33);
@@ -121,13 +119,13 @@ const Artwork = (props) => {
   };
 
   const keyPressed = (p5) => {
-    if (p5.key === 'r') {
+    if (p5.key === "r") {
       p5.clear();
       reset(p5);
       p5.loop();
     }
-    if (p5.key === 's') {
-      let fileName = "SimonBuechi" + window.location.hash;
+    if (p5.key === "s") {
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

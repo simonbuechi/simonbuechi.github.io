@@ -10,12 +10,12 @@ const Artwork = (props) => {
   const SEED = window.localStorage.getItem("signature");
   const PAPER_DENSITY = 5;
   let symmetrieNumber; //how many arms
-  let angleVarianzPIDivider = 1; //PI is divided by this number to define the variance in branching angles
-  let endLength = 2; //length of the branch at which recursions stops
-  let thickness = 1; //thicknes of the lines
-  let thicknesIsLengthDependent = false; //is the stroke thicknes dependent on the lenght of the branch?
-  let thicknesFactor = 0.008; //if the stroke thicknes is dependent on the lenght of the branch, this is multiplied with the length which is multiplied with the thickness
-  let strokeAlpha = 0.25; //alpha of the lines
+  const angleVarianzPIDivider = 1; //PI is divided by this number to define the variance in branching angles
+  const endLength = 2; //length of the branch at which recursions stops
+  const thickness = 1; //thicknes of the lines
+  const thicknesIsLengthDependent = false; //is the stroke thicknes dependent on the lenght of the branch?
+  const thicknesFactor = 0.008; //if the stroke thicknes is dependent on the lenght of the branch, this is multiplied with the length which is multiplied with the thickness
+  const strokeAlpha = 0.25; //alpha of the lines
   let name = "generating...";
   //let fontRegular;
 
@@ -34,7 +34,7 @@ const Artwork = (props) => {
     if (length < endLength) {
       return;
     }
-    let randomAngle = p5.random(0, p5.PI / angleVarianzPIDivider);
+    const randomAngle = p5.random(0, p5.PI / angleVarianzPIDivider);
     p5.push();
     p5.translate(origin.x, origin.y);
     p5.rotate(angle);
@@ -65,17 +65,17 @@ const Artwork = (props) => {
     for (let i = 0; i < iterations; i++) {
       p5.stroke(40, 40 + p5.random() * 10, 40 + p5.random() * 5);
 
-      let x1 = p5.random() * p5.width;
-      let y1 = p5.random() * p5.height;
-      let theta = p5.random() * 2 * p5.PI;
-      let segmentLength = p5.random() * 5 + 2;
-      let x2 = p5.cos(theta) * segmentLength + x1;
-      let y2 = p5.sin(theta) * segmentLength + y1;
+      const x1 = p5.random() * p5.width;
+      const y1 = p5.random() * p5.height;
+      const theta = p5.random() * 2 * p5.PI;
+      const segmentLength = p5.random() * 5 + 2;
+      const x2 = p5.cos(theta) * segmentLength + x1;
+      const y2 = p5.sin(theta) * segmentLength + y1;
       p5.line(x1, y1, x2, y2);
 
-      let x = p5.random() * p5.width;
-      let y = p5.random() * p5.height;
-      let r = p5.floor(p5.random() * 4);
+      const x = p5.random() * p5.width;
+      const y = p5.random() * p5.height;
+      const r = p5.floor(p5.random() * 4);
       p5.ellipse(x, y, r, r);
     }
     /*
@@ -108,7 +108,7 @@ const Artwork = (props) => {
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

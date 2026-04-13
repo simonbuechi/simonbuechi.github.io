@@ -34,22 +34,37 @@ function Header() {
 
   return (
     <React.Fragment>
-      <Grid size={{ xs: 12, sm: 3, lg: 3, xl: 3 }} sx={{ display: { xs: 'none', sm: 'block' } }}>
-        <Box mt={2} mr={2} textAlign="center"></Box>
+      <Grid size={{ xs: 12, sm: 3, lg: 3, xl: 3 }} sx={{ display: { xs: "none", sm: "block" } }}>
+        <Box
+          sx={{
+            mt: 2,
+            mr: 2,
+            textAlign: "center",
+          }}
+        ></Box>
       </Grid>
-      <Grid size={{ xs: 12, sm: 9, lg: 9, xl: 9 }} sx={{ display: { xs: 'none', sm: 'block' } }}>
-        <Box mt={2} mb={4}>
+      <Grid size={{ xs: 12, sm: 9, lg: 9, xl: 9 }} sx={{ display: { xs: "none", sm: "block" } }}>
+        <Box
+          sx={{
+            mt: 2,
+            mb: 4,
+          }}
+        >
           <Typography variant="h1">{t("base.title")}</Typography>
           <Divider />
         </Box>
       </Grid>
-      <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+      <Box sx={{ display: { xs: "block", sm: "none" } }}>
         <Fab color="primary" aria-label="menu" onClick={handleDialogMenuOpen}>
           <Icon path={mdiMenu} />
         </Fab>
       </Box>
-      <Grid size={{ xs: 12 }} sx={{ display: { xs: 'block', sm: 'none' } }}>
-        <Box my={1}>
+      <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", sm: "none" } }}>
+        <Box
+          sx={{
+            my: 1,
+          }}
+        >
           <Typography variant="h1">{t("base.title")}</Typography>
           <Divider />
         </Box>

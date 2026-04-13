@@ -8,11 +8,11 @@ const Artwork = (props) => {
   const CANVAS_HEIGHT = window.localStorage.getItem("customHeight") ? window.localStorage.getItem("customHeight") : window.innerHeight;
   const SEED = window.localStorage.getItem("signature");
 
-  var particles_a = [];
-  var particles_b = [];
-  var particles_c = [];
-  var nums = 200; //200
-  var noiseScale = 800;
+  const particles_a = [];
+  const particles_b = [];
+  const particles_c = [];
+  const nums = 200; //200
+  const noiseScale = 800;
 
   class Particle {
     constructor(p5, x, y) {
@@ -23,7 +23,7 @@ const Artwork = (props) => {
     }
 
     move = function (p5) {
-      var angle = p5.noise(this.pos.x / noiseScale, this.pos.y / noiseScale) * p5.TWO_PI * noiseScale;
+      const angle = p5.noise(this.pos.x / noiseScale, this.pos.y / noiseScale) * p5.TWO_PI * noiseScale;
       this.dir.x = p5.cos(angle);
       this.dir.y = p5.sin(angle);
       this.vel = this.dir.copy();
@@ -48,7 +48,7 @@ const Artwork = (props) => {
     p5.noiseSeed(SEED !== null ? SEED : p5.floor(p5.random(1, 10000)));
     p5.randomSeed(SEED !== null ? SEED : p5.floor(p5.random(1, 10000)));
     p5.background(21, 8, 50);
-    for (var i = 0; i < nums; i++) {
+    for (let i = 0; i < nums; i++) {
       particles_a[i] = new Particle(p5, p5.random(0, p5.width), p5.random(0, p5.height));
       particles_b[i] = new Particle(p5, p5.random(0, p5.width), p5.random(0, p5.height));
       particles_c[i] = new Particle(p5, p5.random(0, p5.width), p5.random(0, p5.height));
@@ -58,9 +58,9 @@ const Artwork = (props) => {
   const draw = (p5) => {
     p5.noStroke();
     p5.smooth();
-    for (var i = 0; i < nums; i++) {
-      var radius = p5.map(i, 0, nums, 1, 2);
-      var alpha = p5.map(i, 0, nums, 0, 250);
+    for (let i = 0; i < nums; i++) {
+      const radius = p5.map(i, 0, nums, 1, 2);
+      const alpha = p5.map(i, 0, nums, 0, 250);
 
       p5.fill(69, 33, 124, alpha);
       particles_a[i].move(p5);

@@ -21,14 +21,11 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import InputAdornment from "@mui/material/InputAdornment";
 import Tooltip from "@mui/material/Tooltip";
-import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
-import ListItemSecondaryAction from "@mui/material/ListItemSecondaryAction";
 import Paper from "@mui/material/Paper";
 //icons
 import Icon from "../utils/Icon";
@@ -38,9 +35,7 @@ import { artworkIndex } from "../artworks/ArtworkIndex";
 
 const STATIC_IMAGE_URL = "https://gateway.pinata.cloud/ipfs/QmaQF2DBoFtsqZ7G3EmWghtt2REwYYCsyWUJ2jbouf39Xv/";
 
-
 const Arts = () => {
-
   const { t } = useTranslation();
   const [dialog, setDialog] = useState(false);
   const [currentContent, setCurrentContent] = useState(<></>);
@@ -50,21 +45,10 @@ const Arts = () => {
   const [seed, setSeed] = useState<string | null>(null);
   const [customField, setCustomField] = useState("");
   const [filter, setFilter] = useState("starred");
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
-  let param = useParams();
+  const param = useParams();
   console.log(param);
-
-  useEffect(() => {
-    if (param["id"]) {
-      let currentArtwork = artworkIndex.find((x) => x.id === param.id);
-      if (currentArtwork) {
-        setCurrentTitle(currentArtwork.primary);
-        setCurrentContent(currentArtwork.content);
-        handledialogOpen();
-      }
-    }
-  }, [param]);
 
   const handledialogOpen = () => {
     setDialog(true);
@@ -75,6 +59,17 @@ const Arts = () => {
     setCurrentContent(<></>);
     navigate("/arts", { replace: false });
   };
+
+  useEffect(() => {
+    if (param["id"]) {
+      const currentArtwork = artworkIndex.find((x) => x.id === param.id);
+      if (currentArtwork) {
+        setCurrentTitle(currentArtwork.primary);
+        setCurrentContent(currentArtwork.content);
+        handledialogOpen();
+      }
+    }
+  }, [param]);
   const handleSwitch = (item: string) => {
     if (item === "customCollapsed") {
       setSignatureCollapsed(false);
@@ -111,7 +106,15 @@ const Arts = () => {
   };
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={4}>
+    <Grid
+      container
+      direction="row"
+      spacing={4}
+      sx={{
+        justifyContent: "center",
+        alignItems: "flex-start",
+      }}
+    >
       <Helmet>
         <title>Simon Buechi Artworks</title>
         <meta name="description" content="Generative artworks created with p5.js and crypto signatures" />
@@ -126,13 +129,19 @@ const Arts = () => {
         <Typography variant="body2" gutterBottom>
           {t("arts.draftsAbout")}
         </Typography>
-        <Box mt={1} mb={3}>
+        <Box
+          sx={{
+            mt: 1,
+            mb: 3,
+          }}
+        >
           <Button
             color="primary"
             variant="contained"
             component="a"
             href="https://github.com/simonbuechi/dweb/tree/master/src/artworks"
-            startIcon={<Icon path={mdiGithub} />}>
+            startIcon={<Icon path={mdiGithub} />}
+          >
             Source Code
           </Button>
           &nbsp;
@@ -159,29 +168,40 @@ const Arts = () => {
             value={customField}
             onChange={handleCustomSeed}
             disabled={seed !== null}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  {seed === null ? (
-                    <Button color="primary" variant="contained" onClick={storeSeed}>
-                      {t("base.save")}
-                    </Button>
-                  ) : (
-                    <Button color="primary" variant="contained" onClick={removeSeed} startIcon={<Icon path={mdiClose} />}>
-                      {t("base.remove")}
-                    </Button>
-                  )}
-                </InputAdornment>
-              ),
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    {seed === null ? (
+                      <Button color="primary" variant="contained" onClick={storeSeed}>
+                        {t("base.save")}
+                      </Button>
+                    ) : (
+                      <Button color="primary" variant="contained" onClick={removeSeed} startIcon={<Icon path={mdiClose} />}>
+                        {t("base.remove")}
+                      </Button>
+                    )}
+                  </InputAdornment>
+                ),
+              },
             }}
           />
         </Collapse>
-        <Box my={3}>
+        <Box
+          sx={{
+            my: 3,
+          }}
+        >
           <Typography variant="h2" gutterBottom>
             {t("arts.draftsTitle")}
           </Typography>
           <Paper>
-            <Box py={2} px={2}>
+            <Box
+              sx={{
+                py: 2,
+                px: 2,
+              }}
+            >
               <Chip
                 color={filter === "all" ? "primary" : "default"}
                 size="small"
@@ -282,11 +302,9 @@ const Arts = () => {
           <Suspense fallback={<CircularProgress color="primary" />}>{currentContent}</Suspense>
         </Dialog>
       </Grid>
-      <Grid size={{ xs: 12, md: 4 }}>
-        &nbsp;
-      </Grid>
+      <Grid size={{ xs: 12, md: 4 }}>&nbsp;</Grid>
     </Grid>
   );
-}
+};
 
 export default Arts;

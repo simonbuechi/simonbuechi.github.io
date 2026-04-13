@@ -14,7 +14,7 @@ const Artwork = (props) => {
   const NO_STARS = 50;
   const MOUNTAIN_ALTITUDE = 200;
   const MOUNTAIN_NOISE = 0.005;
-  let sky = [];
+  const sky = [];
   let b1, b2, m1, m2, m3;
   let mountain;
   /*
@@ -70,16 +70,16 @@ const Artwork = (props) => {
     if (axis === Y_AXIS) {
       // Top to bottom gradient
       for (let i = y; i <= y + h; i++) {
-        let inter = p5.float(p5.map(i, y, y + h, 0, 1));
-        let c = p5.lerpColor(c1, c2, inter);
+        const inter = p5.float(p5.map(i, y, y + h, 0, 1));
+        const c = p5.lerpColor(c1, c2, inter);
         p5.stroke(c);
         p5.line(x, i, x + w, i);
       }
     } else if (axis === X_AXIS) {
       // Left to right gradient
       for (let i = x; i <= x + w; i++) {
-        let inter = p5.float(p5.map(i, x, x + w, 0, 1));
-        let c = p5.lerpColor(c1, c2, inter);
+        const inter = p5.float(p5.map(i, x, x + w, 0, 1));
+        const c = p5.lerpColor(c1, c2, inter);
         p5.stroke(c);
         p5.line(i, y, i, y + h);
       }

@@ -4,7 +4,6 @@ import transDe from "./de.json";
 import transEn from "./en.json";
 import { initReactI18next } from "react-i18next";
 
-
 i18n
   // load translation using xhr -> see /public/locales
   // learn more: https://github.com/i18next/i18next-xhr-backend
@@ -25,13 +24,13 @@ i18n
     lowerCaseLng: true,
     debug: false,
     interpolation: {
-      escapeValue: false // not needed for react as it escapes by default
+      escapeValue: false, // not needed for react as it escapes by default
     },
     keySeparator: ".",
     resources: {
       en: { translation: transEn },
-      de: { translation: transDe }
-    }
+      de: { translation: transDe },
+    },
   });
 
 export default i18n;

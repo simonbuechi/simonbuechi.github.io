@@ -36,9 +36,9 @@ const Artwork = (props) => {
     p5.smooth();
     p5.noStroke();
     p5.fill(35, 40);
-    baseHue = p5.int(p5.random(0,360));
+    baseHue = p5.int(p5.random(0, 360));
     p = p5.createVector(p5.noise(100) * 2 - 1, p5.noise(200) * 2 - 1, 0);
-  }
+  };
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT).parent(canvasParentRef);
@@ -51,7 +51,7 @@ const Artwork = (props) => {
 
   const draw = (p5) => {
     // make full circle
-    p5.translate(p5.width / 2, p5.height / 2);    
+    p5.translate(p5.width / 2, p5.height / 2);
     // set starting position and rotate
     p5.translate(p5.cos(ang) * 80, p5.sin(ang) * 80);
     p5.rotate(ang);
@@ -61,7 +61,7 @@ const Artwork = (props) => {
       const n = 2 * p5.TWO_PI * p5.noise(p.x + x / sx, p.y + y / sy, z);
       //const alpha = p5.map(p5.noise(p.x + x / sx, p.y + y / sy), 0, 1, 0, 1);
       //p5.fill(p5.color(i * colorIter, i * colorIter * 0.8, i * colorIter * 0.5, alpha));
-      p5.fill(p5.color(baseHue + i*100/iter % 360, 70, p5.int(i * 100 / iter), 0.8));
+      p5.fill(p5.color(baseHue + (((i * 100) / iter) % 360), 70, p5.int((i * 100) / iter), 0.8));
       p5.ellipse(x, y, 0.55, 0.55);
       // change drawing position
       x += p5.cos(n) + cx;
@@ -89,13 +89,13 @@ const Artwork = (props) => {
   };
 
   const keyPressed = (p5) => {
-    if (p5.key === 'r') {
+    if (p5.key === "r") {
       p5.clear();
       reset(p5);
       p5.redraw();
     }
-    if (p5.key === 's') {
-      let fileName = "SimonBuechi" + window.location.hash;
+    if (p5.key === "s") {
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

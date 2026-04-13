@@ -34,25 +34,44 @@ function App() {
         <title>Simon Buechi</title>
         <meta name="description" content="Website of Simon Buechi" />
       </Helmet>
-      <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={0}>
+      <Grid
+        container
+        direction="row"
+        spacing={0}
+        sx={{
+          justifyContent: "center",
+          alignItems: "flex-start",
+        }}
+      >
         <Header />
         <Grid size={{ xs: 12, sm: 3, lg: 3, xl: 3 }}>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Box mt={0}>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Box
+              sx={{
+                mt: 0,
+              }}
+            >
               <Tabs
                 orientation="vertical"
                 variant="scrollable"
                 value={value}
                 onChange={(event, value) => {
                   setValue(value);
-                }}>
+                }}
+              >
                 <Tab label={t("base.navStart")} component={Link} to="/" />
                 <Tab label={t("base.navAbout")} component={Link} to="/about" />
                 <Tab label={t("base.navOffering")} component={Link} to="/services" />
                 <Tab label={t("base.navProjects")} component={Link} to="/projects" />
                 <Tab label={t("base.navArts")} component={Link} to="/arts" />
               </Tabs>
-              <Box textAlign="center" mr={4} mt={2}>
+              <Box
+                sx={{
+                  textAlign: "center",
+                  mr: 4,
+                  mt: 2,
+                }}
+              >
                 <Settings />
               </Box>
             </Box>

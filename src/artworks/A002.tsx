@@ -25,11 +25,11 @@ const Artwork = (props) => {
 
     p5.strokeWeight(4); // make lines really thick
 
-    var y = 0;
-    var x = 0;
+    let y = 0;
+    let x = 0;
     let xoff = 1;
-    var currHeight = p5.random(sizes);
-    var currWidth = p5.random(sizes);
+    let currHeight = p5.random(sizes);
+    let currWidth = p5.random(sizes);
 
     while (y < p5.height) {
       x = 0;

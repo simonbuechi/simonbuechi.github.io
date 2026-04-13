@@ -21,12 +21,12 @@ const Artwork = (props) => {
   const BRIGHTNESS_BRIGHT = 100;
   const SATURATION_DARK = 90;
   const BRIGHTNESS_DARK = 20;
-  const ALPHA = .1; //0.15;
+  const ALPHA = 0.1; //0.15;
   const BACKGROUND_SATURATION = 30;
   const BACKGROUND_BRIGHTNESS = 40;
   const BACKGROUND_BRIGHTNESS_LIGHTEN = 25;
   // variables
-  let bodies = [];
+  const bodies = [];
   let mX;
   let mY;
   let xoff = 0;
@@ -66,8 +66,8 @@ const Artwork = (props) => {
     p5.smooth();
     p5.strokeWeight(1);
     //set colors
-    baseHue = p5.floor(p5.random(0,100));
-    //hue1 = baseHue + COLOR_VARIANCE % 100; 
+    baseHue = p5.floor(p5.random(0, 100));
+    //hue1 = baseHue + COLOR_VARIANCE % 100;
     //hue2 = baseHue - COLOR_VARIANCE % 100;
     p5.background(p5.color(baseHue, BACKGROUND_SATURATION, BACKGROUND_BRIGHTNESS));
     p5.noStroke();
@@ -84,7 +84,7 @@ const Artwork = (props) => {
     p5.noFill();
     // setup balls and position
     mX = p5.width * p5.noise(xoff) * (1 - SPLIT_FACTOR) + SPLIT_FACTOR * p5.width;
-    mY = p5.height * p5.noise(xoff + 5) * (1 - SPLIT_FACTOR)  + SPLIT_FACTOR * p5.height;
+    mY = p5.height * p5.noise(xoff + 5) * (1 - SPLIT_FACTOR) + SPLIT_FACTOR * p5.height;
     for (let i = 0; i < NUMBER_OF_LINES; i++) {
       bodies[i] = new ball(p5, mX, mY);
       bodies[i + NUMBER_OF_LINES] = new ball(p5, p5.width - mX, p5.height - mY);
@@ -93,8 +93,8 @@ const Artwork = (props) => {
 
   const draw = (p5) => {
     //p5.strokeWeight(4);
-    mX = p5.width * p5.noise(xoff)* (1-SPLIT_FACTOR) + SPLIT_FACTOR * p5.width;
-    mY = p5.height * p5.noise(xoff + 5)* (1-SPLIT_FACTOR)  + SPLIT_FACTOR * p5.height;
+    mX = p5.width * p5.noise(xoff) * (1 - SPLIT_FACTOR) + SPLIT_FACTOR * p5.width;
+    mY = p5.height * p5.noise(xoff + 5) * (1 - SPLIT_FACTOR) + SPLIT_FACTOR * p5.height;
     for (let i = 0; i < NUMBER_OF_LINES; i++) {
       bodies[i].render(p5, mX, mY, baseHue, SATURATION_DARK, BRIGHTNESS_DARK);
       bodies[i + NUMBER_OF_LINES].render(p5, p5.width - mX, p5.height - mY, baseHue, SATURATION_BRIGHT, BRIGHTNESS_BRIGHT);
@@ -108,7 +108,7 @@ const Artwork = (props) => {
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }

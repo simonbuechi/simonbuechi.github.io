@@ -15,25 +15,25 @@ const Artwork = (props) => {
   let color1, color2, color3, treeColor;
 
   function branch(p5, x, y, ang, len, d) {
-    let x2 = x;
-    let y2 = y;
+    const x2 = x;
+    const y2 = y;
     x += p5.cos(ang) * len;
     y += p5.sin(ang) * len;
-  
+
     if (d === 1) {
       p5.noStroke();
       if (len > 7) {
         p5.fill(color1);
-      } else if ( len > 4) {
+      } else if (len > 4) {
         p5.fill(color2);
       } else {
         p5.fill(color3);
       }
-      p5.ellipse(x2, y2, p5.height/150, p5.height/150);
+      p5.ellipse(x2, y2, p5.height / 150, p5.height / 150);
     } else {
       drawLine(p5, x2, y2, x, y, len);
     }
-  
+
     len *= p5.random(0.7, 0.94);
     d--;
     if (d > 0) {
@@ -41,39 +41,38 @@ const Artwork = (props) => {
       branch(p5, x, y, ang + p5.random(0.2, 0.6), len, d);
     }
   }
-  
-  
-  function drawLine(p5, strtx, strty, finx, finy, sw) { 
-    let numSegs = 15;
+
+  function drawLine(p5, strtx, strty, finx, finy, sw) {
+    const numSegs = 15;
     let fraction = 0;
-    let  divBy = numSegs;
+    let divBy = numSegs;
     let x1 = strtx;
     let y1 = strty;
     p5.stroke(treeColor);
     p5.noFill();
-    p5.strokeWeight(sw * 0.05); 
+    p5.strokeWeight(sw * 0.05);
     p5.beginShape();
     for (let j = 0; j <= numSegs; j++) {
-      let x = (p5.randomGaussian()*.3) + x1 + (fraction * (finx-x1));
-      let y = (p5.randomGaussian()*.3) + y1 + (fraction * (finy-y1));
+      const x = p5.randomGaussian() * 0.3 + x1 + fraction * (finx - x1);
+      const y = p5.randomGaussian() * 0.3 + y1 + fraction * (finy - y1);
       p5.vertex(x, y);
       x1 = x;
       y1 = y;
-      fraction = 1.0/divBy--;
+      fraction = 1.0 / divBy--;
     }
     p5.endShape();
   }
-  
+
   function drawBackground(p5) {
     p5.noStroke();
-    for (let i = 0; i<p5.width; i+=2) {
-      for (let j = 0; j<p5.height; j+=2) {
-        p5.fill(p5.random(95,100));
+    for (let i = 0; i < p5.width; i += 2) {
+      for (let j = 0; j < p5.height; j += 2) {
+        p5.fill(p5.random(95, 100));
         p5.rect(i, j, 2, 2);
       }
     }
-    for (let i = 0; i<100; i++) {
-      p5.fill(p5.random(70,90));
+    for (let i = 0; i < 100; i++) {
+      p5.fill(p5.random(70, 90));
       p5.ellipse(p5.random(0, p5.width), p5.random(0, p5.height), p5.random(1, 3), p5.random(1, 3));
     }
   }
@@ -84,41 +83,41 @@ const Artwork = (props) => {
     p5.noiseSeed(SEED !== null ? SEED : p5.floor(p5.random(1, 10000)));
     p5.randomSeed(SEED !== null ? SEED : p5.floor(p5.random(1, 10000)));
     p5.noLoop();
-    p5.colorMode(p5.HSB,360, 100, 100);
-    const baseHue = p5.floor(p5.random(0,360));
-    color1 = p5.color(baseHue, p5.floor(p5.random(70,100)), p5.floor(p5.random(70,100)));
+    p5.colorMode(p5.HSB, 360, 100, 100);
+    const baseHue = p5.floor(p5.random(0, 360));
+    color1 = p5.color(baseHue, p5.floor(p5.random(70, 100)), p5.floor(p5.random(70, 100)));
     color1.setAlpha(COLOR_ALPHA);
-    color2 = p5.color((baseHue + COLOR_RANGE) % 360, p5.floor(p5.random(70,100)), p5.floor(p5.random(70,100)));
+    color2 = p5.color((baseHue + COLOR_RANGE) % 360, p5.floor(p5.random(70, 100)), p5.floor(p5.random(70, 100)));
     color2.setAlpha(COLOR_ALPHA);
-    color3 = p5.color((baseHue + COLOR_RANGE * 2) % 360, p5.floor(p5.random(70,100)), p5.floor(p5.random(70,100)));
+    color3 = p5.color((baseHue + COLOR_RANGE * 2) % 360, p5.floor(p5.random(70, 100)), p5.floor(p5.random(70, 100)));
     color2.setAlpha(COLOR_ALPHA);
-    treeColor = p5.color(p5.floor(p5.random(10,40)), p5.floor(p5.random(10,100)), p5.floor(p5.random(30,60)));
+    treeColor = p5.color(p5.floor(p5.random(10, 40)), p5.floor(p5.random(10, 100)), p5.floor(p5.random(30, 60)));
   };
 
   const draw = (p5) => {
     p5.background(255);
     drawBackground(p5);
     // startX, startY, initial angle, initial branch (trunk) length, recursion control
-    branch(p5, p5.width/2, p5.height-100, -p5.random(1.4, 1.74), p5.min(p5.height, p5.width) * 0.12 , BRANCH_DEPTH);
+    branch(p5, p5.width / 2, p5.height - 100, -p5.random(1.4, 1.74), p5.min(p5.height, p5.width) * 0.12, BRANCH_DEPTH);
     p5.noFill();
     p5.stroke(180);
     p5.strokeWeight(1);
-    p5.rect(0, 0, p5.width-1, p5.height-1);
+    p5.rect(0, 0, p5.width - 1, p5.height - 1);
   };
 
   const keyPressed = (p5) => {
     //save the canvas when press "s" or space
     if (p5.keyCode === 83 || p5.keyCode === 32) {
-      let fileName = "SimonBuechi" + window.location.hash;
+      const fileName = "SimonBuechi" + window.location.hash;
       fileName.replace(/[^a-zA-Z0-9]/g, "");
       p5.saveCanvas(fileName, "jpg");
     }
-    if (p5.key === 'r') {
+    if (p5.key === "r") {
       p5.refresh();
     }
   };
 
-/*
+  /*
       PVector source = new PVector(mouseX, mouseY);
       
       let branchDistThreshold = 300*300;
@@ -157,7 +156,6 @@ const Artwork = (props) => {
         leaf.dynamic = true;
       }
     */
-
 
   return <Sketch setup={setup} draw={draw} keyPressed={keyPressed} />;
 };

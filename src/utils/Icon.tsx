@@ -1,6 +1,10 @@
-import SvgIcon from "@mui/material/SvgIcon";
+import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
 
-function Icon(props: any) {
+interface IconProps extends SvgIconProps {
+  path: string;
+}
+
+function Icon(props: IconProps) {
   return (
     <SvgIcon {...props}>
       <path d={props.path} />
