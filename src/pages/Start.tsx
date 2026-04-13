@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 //material-ui
 import Typography from "@mui/material/Typography";
@@ -8,28 +8,17 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Grid";
 import Zoom from "@mui/material/Zoom";
-import Dialog from "@mui/material/Dialog";
-import Button from "@mui/material/Button";
-import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
 import List from "@mui/material/List";
 import Box from "@mui/material/Box";
 //icons
 import Icon from "../utils/Icon";
-import { mdiOpenInNew, mdiImage, mdiCreativeCommons } from "@mdi/js";
+import { mdiOpenInNew } from "@mdi/js";
 //images
 import portraitBig from "../assets/simonbuechi-hiking.webp";
 
 function Start() {
   const { t } = useTranslation();
-  const [dialogPortrait, setDialogPortrait] = useState(false);
 
-  const handleDialogPortraitOpen = () => {
-    setDialogPortrait(true);
-  };
-  const handleDialogPortraitClose = () => {
-    setDialogPortrait(false);
-  };
   const myJobs = [
     { primary: "CROWDLITOKEN", secondary: "CTO", link: "https://crowdlitoken.com", icon: <Icon path={mdiOpenInNew} /> },
     { primary: "Voveo", secondary: "Founder & Developer", link: "https://voveo.ch", icon: <Icon path={mdiOpenInNew} /> },
@@ -45,64 +34,46 @@ function Start() {
           {t("start.title")}
         </Typography>
       </Grid>
-      <Grid size={{ xs: 12, md: 6 }}>
+      <Grid size={{ xs: 12, md: 7 }}>
         <Box mb={3}>
+
           <Typography variant="h3" gutterBottom>
             {t("about.personTitle")}
           </Typography>
-          <Typography variant="body2" gutterBottom>
-            {t("start.paragraph1")}
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            {t("about.body1")}
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            {t("about.body2")}
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            {t("about.body3")}
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            {t("about.body4")}
-          </Typography>
-          <Typography gutterBottom>
-            <Button variant="contained" color="primary" onClick={handleDialogPortraitOpen} startIcon={<Icon path={mdiImage} />}>
-              {t("start.image")}
-            </Button>
-          </Typography>
+          <Zoom in style={{ transitionDelay: "450ms" }}>
+            <Typography variant="body2" gutterBottom>
+              {t("start.paragraph1")}
+            </Typography>
+          </Zoom>
+          <Zoom in style={{ transitionDelay: "550ms" }}>
+            <Typography variant="body2" gutterBottom>
+              {t("about.body1")}
+            </Typography>
+          </Zoom>
+          <Zoom in style={{ transitionDelay: "650ms" }}>
+            <Typography variant="body2" gutterBottom>
+              {t("about.body2")}
+            </Typography>
+          </Zoom>
+          <Zoom in style={{ transitionDelay: "750ms" }}>
+            <Typography variant="body2" gutterBottom>
+              {t("about.body3")}
+            </Typography>
+          </Zoom>
+          <Zoom in style={{ transitionDelay: "850ms" }}>
+            <Typography variant="body2" gutterBottom>
+              {t("about.body4")}
+            </Typography>
+          </Zoom>
         </Box>
       </Grid>
-      <Grid size={{ xs: 12, md: 6 }}>
-        <Typography variant="h3" gutterBottom>
-          {t("start.engagementsTitle")}
-        </Typography>
-        <List dense>
-          {myJobs.map((item, index) => (
-            <Zoom in style={{ transitionDelay: 450 + index * 100 + "ms" }} key={item.primary}>
-              <div>
-                <ListItemButton component="a" href={item.link}>
-                  <ListItemIcon color="secondary">{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.primary} secondary={item.secondary} />
-                </ListItemButton>
-              </div>
-            </Zoom>
-          ))}
-        </List>
+      <Grid size={{ xs: 12, md: 5 }}>
+        <Box mb={4} className="skewed-frame-container">
+          <div className="skewed-frame">
+            <img src={portraitBig} alt="simon buechi portrait" />
+          </div>
+        </Box>
       </Grid>
-      <Dialog onClose={handleDialogPortraitClose} aria-labelledby="dialogPortrait" open={dialogPortrait} maxWidth="xl">
-        <DialogContent>
-          <img src={portraitBig} alt="simon buechi portrait" className="dialog" />
-        </DialogContent>
-        <DialogActions>
-          <Button rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" color="secondary" startIcon={<Icon path={mdiCreativeCommons} />}>
-            {t("base.creativecommons")}
-          </Button>
-          &nbsp;
-          <Button onClick={handleDialogPortraitClose} color="secondary" autoFocus>
-            {t("base.close")}
-          </Button>
-        </DialogActions>
-      </Dialog>
     </Grid>
   );
 }

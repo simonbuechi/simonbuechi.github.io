@@ -298,3 +298,33 @@ h6 {
     transform: rotateX(65deg) rotateZ(360deg);
   }
 }
+
+.skewed-frame-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+.skewed-frame {
+  background-color: #fff;
+  padding: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+  transform: rotate(-3deg);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  max-width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.skewed-frame:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.2), 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.skewed-frame img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
