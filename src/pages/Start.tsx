@@ -35,27 +35,27 @@ function Start() {
           <Typography variant="h3" gutterBottom>
             {t("about.personTitle")}
           </Typography>
-          <Zoom in style={{ transitionDelay: "450ms" }}>
+          <Zoom in style={{ transitionDelay: "150ms" }}>
             <Typography variant="body2" gutterBottom>
               {t("start.paragraph1")}
             </Typography>
           </Zoom>
-          <Zoom in style={{ transitionDelay: "550ms" }}>
+          <Zoom in style={{ transitionDelay: "250ms" }}>
             <Typography variant="body2" gutterBottom>
               {t("about.body1")}
             </Typography>
           </Zoom>
-          <Zoom in style={{ transitionDelay: "650ms" }}>
+          <Zoom in style={{ transitionDelay: "350ms" }}>
             <Typography variant="body2" gutterBottom>
               {t("about.body2")}
             </Typography>
           </Zoom>
-          <Zoom in style={{ transitionDelay: "750ms" }}>
+          <Zoom in style={{ transitionDelay: "450ms" }}>
             <Typography variant="body2" gutterBottom>
               {t("about.body3")}
             </Typography>
           </Zoom>
-          <Zoom in style={{ transitionDelay: "850ms" }}>
+          <Zoom in style={{ transitionDelay: "550ms" }}>
             <Typography variant="body2" gutterBottom>
               {t("about.body4")}
             </Typography>

@@ -83,20 +83,11 @@ function Header() {
               <ListItemButton onClick={handleDialogMenuClose} component={Link} to="/about">
                 <ListItemText primary={t("base.navAbout")} />
               </ListItemButton>
-              <ListItemButton onClick={handleDialogMenuClose} component={Link} to="/services">
-                <ListItemText primary={t("base.navOffering")} />
-              </ListItemButton>
               <ListItemButton onClick={handleDialogMenuClose} component={Link} to="/projects">
                 <ListItemText primary={t("base.navProjects")} />
               </ListItemButton>
               <ListItemButton onClick={handleDialogMenuClose} component={Link} to="/arts">
                 <ListItemText primary={t("base.navArts")} />
-              </ListItemButton>
-              <ListItemButton onClick={handleDialogMenuClose} component={Link} to="/blog">
-                <ListItemText primary={t("base.navBlog")} />
-              </ListItemButton>
-              <ListItemButton onClick={handleDialogMenuClose} component={Link} to="/wall">
-                <ListItemText primary={t("base.navWall")} />
               </ListItemButton>
               <ListItem>
                 <ListItemText primary={<Settings />} />

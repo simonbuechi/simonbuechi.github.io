@@ -61,7 +61,6 @@ function App() {
               >
                 <Tab label={t("base.navStart")} component={Link} to="/" />
                 <Tab label={t("base.navAbout")} component={Link} to="/about" />
-                <Tab label={t("base.navOffering")} component={Link} to="/services" />
                 <Tab label={t("base.navProjects")} component={Link} to="/projects" />
                 <Tab label={t("base.navArts")} component={Link} to="/arts" />
               </Tabs>
