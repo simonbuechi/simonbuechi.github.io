@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 //material-ui
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";

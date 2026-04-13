@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 //material-ui
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";

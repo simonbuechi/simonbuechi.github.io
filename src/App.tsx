@@ -1,7 +1,7 @@
 import React, { useState, Suspense, lazy } from "react";
 import { useTranslation } from "react-i18next";
 import { Routes, Route, Link, Outlet } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import "./style/index.css";
 //material-ui components
 import Container from "@mui/material/Container";

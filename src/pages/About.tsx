@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 //material-ui
 import Typography from "@mui/material/Typography";
