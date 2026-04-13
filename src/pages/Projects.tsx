@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 //material-ui
@@ -13,8 +12,8 @@ import Zoom from "@mui/material/Zoom";
 //icons
 import Icon from "../utils/Icon";
 import { mdiChevronDown } from "@mdi/js";
-// custom
-import Contact from "../structure/Contact";
+//images
+import portrait from "../assets/simonbuechi-businessattire.webp";
 
 function Projects() {
   const { t } = useTranslation();
@@ -22,7 +21,7 @@ function Projects() {
     {
       title: t("projects.voveoTitle"),
       description: t("projects.voveoDescription"),
-      link: "https://voveo.ch",
+      link: "https://voveo-ch.github.io/",
       linkTitle: t("projects.voveoLink"),
     },
     {
@@ -40,8 +39,26 @@ function Projects() {
     {
       title: t("projects.simonbuechiTitle"),
       description: t("projects.simonbuechiDescription"),
-      link: "https://github.com/simonbuechi/dweb",
+      link: "https://github.com/simonbuechi/simonbuechi.github.io",
       linkTitle: t("projects.simonbuechiLink"),
+    },
+    {
+      title: t("projects.bjjAmigoTitle"),
+      description: t("projects.bjjAmigoDescription"),
+      link: "https://github.com/simonbuechi/bjj",
+      linkTitle: t("projects.bjjAmigoLink"),
+    },
+    {
+      title: t("projects.sportAmigoTitle"),
+      description: t("projects.sportAmigoDescription"),
+      link: "https://github.com/simonbuechi/sport",
+      linkTitle: t("projects.sportAmigoLink"),
+    },
+    {
+      title: t("projects.kopfkinoTitle"),
+      description: t("projects.kopfkinoDescription"),
+      link: "https://github.com/simonbuechi/kopfkino",
+      linkTitle: t("projects.kopfkinoLink"),
     },
   ];
 
@@ -55,17 +72,19 @@ function Projects() {
         alignItems: "flex-start",
       }}
     >
-      <Grid size={{ xs: 12, md: 8 }}>
-        <Helmet>
-          <title>Simon Buechi | Projects</title>
-          <meta name="description" content="Simon Buechi Büchi projects" />
-        </Helmet>
+      <Helmet>
+        <title>Simon Buechi | Projects</title>
+        <meta name="description" content="Simon Buechi Büchi projects" />
+      </Helmet>
+      <Grid size={{ xs: 12, md: 12 }}>
         <Typography variant="h2" gutterBottom>
           {t("projects.title")}
         </Typography>
         <Typography variant="body2" gutterBottom>
           {t("projects.paragraph1")}
         </Typography>
+      </Grid>
+      <Grid size={{ xs: 12, md: 8 }}>
         {projects.map((item, index) => (
           <Zoom in style={{ transitionDelay: 150 + index * 100 + "ms" }} key={item.title}>
             <Box
@@ -84,7 +103,7 @@ function Projects() {
                     </Typography>
                     {item.link && (
                       <Typography variant="body2" gutterBottom>
-                        <Button variant="contained" color="primary" href={item.link}>
+                        <Button variant="outlined" color="primary" href={item.link}>
                           {item.linkTitle}
                         </Button>
                       </Typography>
@@ -97,7 +116,11 @@ function Projects() {
         ))}
       </Grid>
       <Grid size={{ xs: 12, md: 4 }}>
-        <Contact />
+        <Box className="skewed-frame-container">
+          <div className="skewed-frame">
+            <img src={portrait} alt="simon buechi" />
+          </div>
+        </Box>
       </Grid>
     </Grid>
   );

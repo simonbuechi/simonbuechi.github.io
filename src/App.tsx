@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from "react";
+import { useState, Suspense, lazy } from "react";
 import { useTranslation } from "react-i18next";
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -23,6 +23,7 @@ const Projects = lazy(() => import("./pages/Projects"));
 //const Blog = lazy(() => import("./pages/Blog"));
 //const Queries = lazy(() => import("./pages/Queries"));
 const Arts = lazy(() => import("./pages/Arts"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 function App() {
   const [value, setValue] = useState(0);
@@ -63,6 +64,7 @@ function App() {
                 <Tab label={t("base.navAbout")} component={Link} to="/about" />
                 <Tab label={t("base.navProjects")} component={Link} to="/projects" />
                 <Tab label={t("base.navArts")} component={Link} to="/arts" />
+                <Tab label={t("base.navContact")} component={Link} to="/contact" />
               </Tabs>
               <Box
                 sx={{
@@ -85,6 +87,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/arts/:id" element={<Arts />} />
               <Route path="/arts" element={<Arts />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
             <Outlet />
           </Suspense>

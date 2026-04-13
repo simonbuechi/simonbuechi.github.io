@@ -88,7 +88,7 @@ const theme = createTheme({
         root: {
           textTransform: "none",
           fontFamily: "Source Serif Pro",
-          fontSize: "1.3rem",
+          fontSize: "1.1rem",
           fontWeight: 400,
         },
       },
@@ -133,6 +133,7 @@ const theme = createTheme({
           fontFamily: "Source Serif Pro",
           textTransform: "none",
           marginBottom: 4,
+          borderRadius: 8,
         },
       },
       variants: [

@@ -27,7 +27,7 @@ function Settings() {
 
   return (
     <React.Fragment>
-      <ButtonGroup color="secondary" size="small">
+      <ButtonGroup color="primary" size="small">
         <Tooltip title={i18n.language === "en" ? "" : t("base.toEnglish")}>
           <Button onClick={handleLangChange("en")} disabled={i18n.language === "en" ? true : false}>
             En
@@ -45,7 +45,7 @@ function Settings() {
         }}
       >
         <Tooltip title="Disclaimer">
-          <Button size="small" variant="outlined" color="secondary" onClick={handleDialogDisclaimerOpen}>
+          <Button size="small" variant="outlined" color="primary" onClick={handleDialogDisclaimerOpen}>
             Disclaimer
           </Button>
         </Tooltip>

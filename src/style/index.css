@@ -321,6 +321,14 @@ h6 {
   border-radius: 2px;
 }
 
+.skewed-frame.skewed-frame--reverse {
+  transform: rotate(3deg);
+}
+
+.skewed-frame--reverse:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
 .skewed-frame:hover {
   transform: rotate(0deg) scale(1.05);
   box-shadow:

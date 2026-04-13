@@ -135,17 +135,7 @@ const Arts = () => {
             mb: 3,
           }}
         >
-          <Button
-            color="primary"
-            variant="contained"
-            component="a"
-            href="https://github.com/simonbuechi/dweb/tree/master/src/artworks"
-            startIcon={<Icon path={mdiGithub} />}
-          >
-            Source Code
-          </Button>
-          &nbsp;
-          <Button color="primary" variant="contained" component="a" href="https://p5js.org" startIcon={<Icon path={mdiOpenInNew} />}>
+          <Button color="primary" variant="outlined" component="a" href="https://p5js.org" startIcon={<Icon path={mdiOpenInNew} />}>
             Learn about P5
           </Button>
         </Box>
