@@ -29,7 +29,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Paper from "@mui/material/Paper";
 //icons
 import Icon from "../utils/Icon";
-import { mdiClose, mdiOpenInNew, mdiImage, mdiCheck, mdiGithub, mdiRadioboxBlank } from "@mdi/js";
+import { mdiClose, mdiOpenInNew, mdiImage, mdiCheck, mdiRadioboxBlank } from "@mdi/js";
 // custom
 import { artworkIndex } from "../artworks/ArtworkIndex";
 

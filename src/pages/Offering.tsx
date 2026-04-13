@@ -42,8 +42,6 @@ import react from "../assets/techicons/react.jpg";
 import truffle from "../assets/techicons/truffle.jpg";
 import ipfs from "../assets/techicons/ipfs.jpg";
 import web3js from "../assets/techicons/webjs.jpg";
-// custom
-import Contact from "../structure/Contact";
 
 function Offering() {
   const { t } = useTranslation();
@@ -240,9 +238,6 @@ function Offering() {
             </AccordionDetails>
           </Accordion>
         </Box>
-      </Grid>
-      <Grid size={{ xs: 12, md: 4 }}>
-        <Contact />
       </Grid>
     </Grid>
   );
