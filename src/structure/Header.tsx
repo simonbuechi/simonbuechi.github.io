@@ -89,6 +89,9 @@ function Header() {
               <ListItemButton onClick={handleDialogMenuClose} component={Link} to="/arts">
                 <ListItemText primary={t("base.navArts")} />
               </ListItemButton>
+              <ListItemButton onClick={handleDialogMenuClose} component={Link} to="/contact">
+                <ListItemText primary={t("base.navContact")} />
+              </ListItemButton>
               <ListItem>
                 <ListItemText primary={<Settings />} />
               </ListItem>
